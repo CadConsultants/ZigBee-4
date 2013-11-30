@@ -1,0 +1,2458 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V7.51A/W32 for 8051                04/Nov/2013  15:16:46 #
+# Copyright 2004-2009 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂç¿ª·¢Æ½Ì¨V1.10\C51R #
+#                          F-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS  #
+#                          INSTRUMENTS\ZSTACK-CC2530-2.2.0-1.3.0\Components\h #
+#                          al\target\CC2530EB\hal_lcd.c                       #
+#    Command line       =  -f "E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂç¿ª·¢Æ½Ì¨V1.10\ #
+#                          C51RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PROÑÝÊ¾²âÊÔ³ÌÐò\TE #
+#                          XAS INSTRUMENTS\ZSTACK-CC2530-2.2.0-1.3.0\Projects #
+#                          \zstack\Samples\SIMPLEAPP\CC2530DB\..\..\..\Tools\ #
+#                          CC2530DB\f8wCoord.cfg" (-DCPU32MHZ                 #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DZDO_COORDINATOR -DRTR_NWK -DBLINK_LEDS) -f     #
+#                          "E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂç¿ª·¢Æ½Ì¨V1.10\C51 #
+#                          RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS #
+#                           INSTRUMENTS\ZSTACK-CC2530-2.2.0-1.3.0\Projects\zs #
+#                          tack\Samples\SIMPLEAPP\CC2530DB\..\..\..\Tools\CC2 #
+#                          530DB\f8wConfig.cfg" (-DSECURE=0                   #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x04000000                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          "E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂç¿ª·¢Æ½Ì¨V1.10\C51 #
+#                          RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS #
+#                           INSTRUMENTS\ZSTACK-CC2530-2.2.0-1.3.0\Components\ #
+#                          hal\target\CC2530EB\hal_lcd.c" -D ZIGBEEPRO -D     #
+#                          HOLD_AUTO_START -D BUILD_ALL_DEVICES -D REFLECTOR  #
+#                          -D NV_INIT -D xNV_RESTORE -D ZTOOL_P1 -D MT_TASK   #
+#                          -D MT_SYS_FUNC -D xMT_SAPI_FUNC -D                 #
+#                          xMT_SAPI_CB_FUNC -lC "E:\C51RF-CC2530-PKÎÞÏßZIGBEE #
+#                          ÍøÂç¿ª·¢Æ½Ì¨V1.10\C51RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_ #
+#                          PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS INSTRUMENTS\ZSTACK-CC2530-2. #
+#                          2.0-1.3.0\Projects\zstack\Samples\SIMPLEAPP\CC2530 #
+#                          DB\SimpleCollectorEB-Pro\List\" -lA                #
+#                          "E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂç¿ª·¢Æ½Ì¨V1.10\C51 #
+#                          RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS #
+#                           INSTRUMENTS\ZSTACK-CC2530-2.2.0-1.3.0\Projects\zs #
+#                          tack\Samples\SIMPLEAPP\CC2530DB\SimpleCollectorEB- #
+#                          Pro\List\" --diag_suppress Pe001,Pa010 -o          #
+#                          "E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂç¿ª·¢Æ½Ì¨V1.10\C51 #
+#                          RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS #
+#                           INSTRUMENTS\ZSTACK-CC2530-2.2.0-1.3.0\Projects\zs #
+#                          tack\Samples\SIMPLEAPP\CC2530DB\SimpleCollectorEB- #
+#                          Pro\Obj\" -e --require_prototypes --debug          #
+#                          --core=plain --dptr=16,1 --data_model=large        #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 8 -I "E:\C51RF-CC2530-PKÎÞÏßZIGB #
+#                          EEÍøÂç¿ª·¢Æ½Ì¨V1.10\C51RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE200 #
+#                          7_PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS INSTRUMENTS\ZSTACK-CC2530- #
+#                          2.2.0-1.3.0\Projects\zstack\Samples\SIMPLEAPP\CC25 #
+#                          30DB\" -I "E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂç¿ª·¢Æ½Ì #
+#                          ¨V1.10\C51RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PROÑÝÊ¾²âÊÔ #
+#                          ³ÌÐò\TEXAS INSTRUMENTS\ZSTACK-CC2530-2.2.0-1.3.0\P #
+#                          rojects\zstack\Samples\SIMPLEAPP\CC2530DB\..\SOURC #
+#                          E\" -I "E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂç¿ª·¢Æ½Ì¨V1 #
+#                          .10\C51RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PROÑÝÊ¾²âÊÔ³ÌÐ #
+#                          ò\TEXAS INSTRUMENTS\ZSTACK-CC2530-2.2.0-1.3.0\Proj #
+#                          ects\zstack\Samples\SIMPLEAPP\CC2530DB\..\..\..\ZM #
+#                          AIN\TI2530DB\" -I "E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂ #
+#                          ç¿ª·¢Æ½Ì¨V1.10\C51RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PRO #
+#                          ÑÝÊ¾²âÊÔ³ÌÐò\TEXAS INSTRUMENTS\ZSTACK-CC2530-2.2.0 #
+#                          -1.3.0\Projects\zstack\Samples\SIMPLEAPP\CC2530DB\ #
+#                          ..\..\..\..\..\COMPONENTS\MT\" -I                  #
+#                          "E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂç¿ª·¢Æ½Ì¨V1.10\C51 #
+#                          RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS #
+#                           INSTRUMENTS\ZSTACK-CC2530-2.2.0-1.3.0\Projects\zs #
+#                          tack\Samples\SIMPLEAPP\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\HAL\INCLUDE\" -I                           #
+#                          "E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂç¿ª·¢Æ½Ì¨V1.10\C51 #
+#                          RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS #
+#                           INSTRUMENTS\ZSTACK-CC2530-2.2.0-1.3.0\Projects\zs #
+#                          tack\Samples\SIMPLEAPP\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\HAL\TARGET\CC2530EB\" -I                   #
+#                          "E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂç¿ª·¢Æ½Ì¨V1.10\C51 #
+#                          RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS #
+#                           INSTRUMENTS\ZSTACK-CC2530-2.2.0-1.3.0\Projects\zs #
+#                          tack\Samples\SIMPLEAPP\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\OSAL\MCU\CCSOC\" -I                        #
+#                          "E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂç¿ª·¢Æ½Ì¨V1.10\C51 #
+#                          RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS #
+#                           INSTRUMENTS\ZSTACK-CC2530-2.2.0-1.3.0\Projects\zs #
+#                          tack\Samples\SIMPLEAPP\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\OSAL\INCLUDE\" -I                          #
+#                          "E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂç¿ª·¢Æ½Ì¨V1.10\C51 #
+#                          RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS #
+#                           INSTRUMENTS\ZSTACK-CC2530-2.2.0-1.3.0\Projects\zs #
+#                          tack\Samples\SIMPLEAPP\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\STACK\AF\" -I "E:\C51RF-CC2530-PKÎÞÏßZIGBE #
+#                          EÍøÂç¿ª·¢Æ½Ì¨V1.10\C51RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007 #
+#                          _PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS INSTRUMENTS\ZSTACK-CC2530-2 #
+#                          .2.0-1.3.0\Projects\zstack\Samples\SIMPLEAPP\CC253 #
+#                          0DB\..\..\..\..\..\COMPONENTS\STACK\NWK\" -I       #
+#                          "E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂç¿ª·¢Æ½Ì¨V1.10\C51 #
+#                          RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS #
+#                           INSTRUMENTS\ZSTACK-CC2530-2.2.0-1.3.0\Projects\zs #
+#                          tack\Samples\SIMPLEAPP\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\STACK\SEC\" -I "E:\C51RF-CC2530-PKÎÞÏßZIGB #
+#                          EEÍøÂç¿ª·¢Æ½Ì¨V1.10\C51RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE200 #
+#                          7_PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS INSTRUMENTS\ZSTACK-CC2530- #
+#                          2.2.0-1.3.0\Projects\zstack\Samples\SIMPLEAPP\CC25 #
+#                          30DB\..\..\..\..\..\COMPONENTS\STACK\SAPI\" -I     #
+#                          "E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂç¿ª·¢Æ½Ì¨V1.10\C51 #
+#                          RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS #
+#                           INSTRUMENTS\ZSTACK-CC2530-2.2.0-1.3.0\Projects\zs #
+#                          tack\Samples\SIMPLEAPP\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\STACK\SYS\" -I "E:\C51RF-CC2530-PKÎÞÏßZIGB #
+#                          EEÍøÂç¿ª·¢Æ½Ì¨V1.10\C51RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE200 #
+#                          7_PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS INSTRUMENTS\ZSTACK-CC2530- #
+#                          2.2.0-1.3.0\Projects\zstack\Samples\SIMPLEAPP\CC25 #
+#                          30DB\..\..\..\..\..\COMPONENTS\STACK\ZDO\" -I      #
+#                          "E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂç¿ª·¢Æ½Ì¨V1.10\C51 #
+#                          RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS #
+#                           INSTRUMENTS\ZSTACK-CC2530-2.2.0-1.3.0\Projects\zs #
+#                          tack\Samples\SIMPLEAPP\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\ZMAC\F8W\" -I "E:\C51RF-CC2530-PKÎÞÏßZIGBE #
+#                          EÍøÂç¿ª·¢Æ½Ì¨V1.10\C51RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007 #
+#                          _PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS INSTRUMENTS\ZSTACK-CC2530-2 #
+#                          .2.0-1.3.0\Projects\zstack\Samples\SIMPLEAPP\CC253 #
+#                          0DB\..\..\..\..\..\COMPONENTS\ZMAC\" -I            #
+#                          "E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂç¿ª·¢Æ½Ì¨V1.10\C51 #
+#                          RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS #
+#                           INSTRUMENTS\ZSTACK-CC2530-2.2.0-1.3.0\Projects\zs #
+#                          tack\Samples\SIMPLEAPP\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\SERVICES\SADDR\" -I                        #
+#                          "E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂç¿ª·¢Æ½Ì¨V1.10\C51 #
+#                          RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS #
+#                           INSTRUMENTS\ZSTACK-CC2530-2.2.0-1.3.0\Projects\zs #
+#                          tack\Samples\SIMPLEAPP\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\SERVICES\SDATA\" -I                        #
+#                          "E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂç¿ª·¢Æ½Ì¨V1.10\C51 #
+#                          RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS #
+#                           INSTRUMENTS\ZSTACK-CC2530-2.2.0-1.3.0\Projects\zs #
+#                          tack\Samples\SIMPLEAPP\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\MAC\INCLUDE\" -I                           #
+#                          "E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂç¿ª·¢Æ½Ì¨V1.10\C51 #
+#                          RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS #
+#                           INSTRUMENTS\ZSTACK-CC2530-2.2.0-1.3.0\Projects\zs #
+#                          tack\Samples\SIMPLEAPP\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\MAC\HIGH_LEVEL\" -I                        #
+#                          "E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂç¿ª·¢Æ½Ì¨V1.10\C51 #
+#                          RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS #
+#                           INSTRUMENTS\ZSTACK-CC2530-2.2.0-1.3.0\Projects\zs #
+#                          tack\Samples\SIMPLEAPP\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\MAC\LOW_LEVEL\srf04\" -I                   #
+#                          "E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂç¿ª·¢Æ½Ì¨V1.10\C51 #
+#                          RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS #
+#                           INSTRUMENTS\ZSTACK-CC2530-2.2.0-1.3.0\Projects\zs #
+#                          tack\Samples\SIMPLEAPP\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\MAC\LOW_LEVEL\srf04\SINGLE_CHIP\" -I       #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench   #
+#                          5.3 Evaluation version\8051\INC\" -I "C:\Program   #
+#                          Files\IAR Systems\Embedded Workbench 5.3           #
+#                          Evaluation version\8051\INC\CLIB\" -Ohz            #
+#    List file          =  E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂç¿ª·¢Æ½Ì¨V1.10\C51R #
+#                          F-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS  #
+#                          INSTRUMENTS\ZSTACK-CC2530-2.2.0-1.3.0\Projects\zst #
+#                          ack\Samples\SIMPLEAPP\CC2530DB\SimpleCollectorEB-P #
+#                          ro\List\hal_lcd.lst                                #
+#    Object file        =  E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂç¿ª·¢Æ½Ì¨V1.10\C51R #
+#                          F-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS  #
+#                          INSTRUMENTS\ZSTACK-CC2530-2.2.0-1.3.0\Projects\zst #
+#                          ack\Samples\SIMPLEAPP\CC2530DB\SimpleCollectorEB-P #
+#                          ro\Obj\hal_lcd.r51                                 #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+E:\C51RF-CC2530-PKÎÞÏßZIGBEEÍøÂç¿ª·¢Æ½Ì¨V1.10\C51RF-CC2530ÑÝÊ¾³ÌÐò\ZIGBEE2007_PROÑÝÊ¾²âÊÔ³ÌÐò\TEXAS INSTRUMENTS\ZSTACK-CC2530-2.2.0-1.3.0\Components\hal\target\CC2530EB\hal_lcd.c
+      1          #include "LCD128_64.h"
+
+   \                                 In  segment SFR_AN, at 0x80
+   \   union <unnamed> volatile __sfr _A_P0
+   \                     _A_P0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x90
+   \   union <unnamed> volatile __sfr _A_P1
+   \                     _A_P1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xa0
+   \   union <unnamed> volatile __sfr _A_P2
+   \                     _A_P2:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfd
+   \   unsigned char volatile __sfr P0DIR
+   \                     P0DIR:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfe
+   \   unsigned char volatile __sfr P1DIR
+   \                     P1DIR:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xff
+   \   unsigned char volatile __sfr P2DIR
+   \                     P2DIR:
+   \   000000                DS 1
+      2          #include "Font.h"
+      3          #include "hal_lcd.h"
+      4          #include "OSAL.h"
+      5          #include "string.h"
+      6          
+      7          /****************************************************
+      8          * B) Command Table per device *
+      9          ****************************************************/
+     10          #define 	DisplayOff 	0xAE
+     11          #define 	DisplayOn 	0xAF
+     12          #define 	DisplayStart 	0x40
+     13          #define 	PageAddr 	0xB0
+     14          #define 	ColAddrHi 	0x10
+     15          #define 	ColAddrLo 	0x00
+     16          #define 	SegRemapOff 	0xA0
+     17          #define 	SegRemapOn 	0xA1
+     18          #define 	NormalDisp 	0xA6
+     19          #define 	ReverseDisp 	0xA7
+     20          #define 	ExitEntireD 	0xA4
+     21          #define 	EntEntireD 	0xA5
+     22          #define 	EnterRMW 	0xE0
+     23          #define 	ExitRMW 	0xEE
+     24          #define 	SWRest 		0xE2
+     25          #define 	ComRemapOff 	0xC0
+     26          #define 	ComRemapOn 	0xC8
+     27          #define 	PwrCtrlReg 	0x28
+     28          #define 	OPampBuffer 	0x01
+     29          #define 	IntReg 		0x02
+     30          #define 	IntVolBstr 	0x04
+     31          #define 	IntRegRatio 	0x20
+     32          #define 	ContCtrlReg 	0x81
+     33          #define 	CmdMuxRatio 	0x48
+     34          #define 	CmdBiasRatio 	0x50
+     35          #define 	DispOffset 	0x44
+     36          #define 	IconModeOn 	0xA3
+     37          #define 	IconModeOff 	0xA2
+     38          #define 	NlineInver 	0x4C
+     39          #define 	DCDCconver 	0x64
+     40          #define 	PowersavStandby 0xA8
+     41          #define 	PowersavSleep 	0xA9
+     42          #define 	PowersavOff 	0xE1
+     43          #define 	InterOsc 	0xAB
+     44          #define 	Device SSD1821 			/* device under demo */
+     45          #define 	ColNo 		132 		/* number of Column/Seg on LCD glass*/
+     46          #define 	RowNo 		64		/* number of Row/Com/Mux */
+     47          #define 	PS 		1 		/* fixed to Parallel mode */
+     48          #define 	PageNo 		10 		/* Total no of RAM pages */
+     49          #define 	IconPage 	10 		/* Icon Page number */
+     50          #define 	All0 		6 		/* 3 for all 0, 4 for all 1 */
+     51          #define 	All1 		4
+     52          #define 	iIntRegValue 	1 		/*Internal Regulator Resistor Ratio Value */
+     53          #define 	iContCtrlRegValue 16 		/* Contrast Control Register Value */
+     54          #define 	iIntRegValuea 	20 		/*Internal Regulator Resistor Ratio Value */
+     55          #define 	iContCtrlRegValuea 16 		/* Contrast Control Register Value */
+     56          #define 	iIntRegValueb 	1 		/*Internal Regulator Resistor Ratio Value */
+     57          #define 	iContCtrlRegValueb 16 		/* Contrast Control Register Value */
+     58          #define 	MSGNo 		16
+     59          #define 	MSGLength 	22
+     60          #define 	SSLNameNo 	4
+     61          #define 	DevicePg 	0 		//RAM page for showing device name
+     62          #define 	FeaturePg 	1 		//RAM page for showing feature
+     63          #define 	GRAPHICNo 	13
+     64          #define 	xlogo 		38
+     65          #define 	ylogo 		5
+     66          #define 	xsolomon 	91
+     67          #define 	ysolomon 	2
+     68          #define 	xsystech 	81
+     69          #define 	ysystech 	2
+     70          #define 	xlimited 	70
+     71          #define 	ylimited 	2
+     72          #define 	xcc 		16
+     73          #define 	ycc 		2
+     74          #define 	xpageq 		128
+     75          #define 	ypageq 		4
+     76          #define 	horizonal 	0
+     77          #define 	d_time 		60
+     78          ////////////////////////////////////////////////////////////////////////////////////////////
+     79          
+     80          void Print8(uint16 y,uint16 x, uint8 ch[],uint16 yn);
+     81          
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     82          uint8 ContrastValue =90;
+   \                     ContrastValue:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for ContrastValue>`
+   \   000001                REQUIRE __INIT_XDATA_I
+     83          void WriteLCD(uint8 fs, uint8 da);
+     84          void Write595(uint8 dat);
+     85          void delay_us(uint16 s);
+     86          void delay1(uint8 jj);
+     87          void contrastctrl(uint8 start, uint8 stop);
+     88          void HalLcdInit(void);
+     89          void PrintCh8(uint16 y,uint16 x, uint8 ch,uint16 yn);
+     90          void upLcd( char *ptr,uint8 op );
+     91          void HalLcdClearLine( uint8 line );
+     92          
+     93          
+     94          
+     95          
+     96          
+     97          
+     98          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     99          void delay1(uint8 jj)
+   \                     delay1:
+    100          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    101          	uint8 i;
+    102          	for(i=0; i<jj; i++);
+   \   000000   7A00         MOV     R2,#0x0
+   \   000002   8001         SJMP    ??delay1_0
+   \                     ??delay1_1:
+   \   000004   0A           INC     R2
+   \                     ??delay1_0:
+   \   000005   EA           MOV     A,R2
+   \   000006   C3           CLR     C
+   \   000007   99           SUBB    A,R1
+   \   000008   40FA         JC      ??delay1_1
+    103          }
+   \   00000A   02....       LJMP    ?BRET
+    104          
+    105          
+    106          
+    107          
+    108          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    109          void delay_us(uint16 s)
+   \                     delay_us:
+    110          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    111          	uint16 i;
+    112          	for(i=0; i<s; i++);
+   \   000000   7800         MOV     R0,#0x0
+   \   000002   7900         MOV     R1,#0x0
+   \   000004   8003         SJMP    ??CrossCallReturnLabel_17
+   \                     ??delay_us_0:
+   \   000006   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_17:
+   \   000009   C3           CLR     C
+   \   00000A   E8           MOV     A,R0
+   \   00000B   9A           SUBB    A,R2
+   \   00000C   E9           MOV     A,R1
+   \   00000D   9B           SUBB    A,R3
+   \   00000E   40F6         JC      ??delay_us_0
+    113          	for(i=0; i<s; i++);
+   \   000010   7800         MOV     R0,#0x0
+   \   000012   7900         MOV     R1,#0x0
+   \   000014   8003         SJMP    ??CrossCallReturnLabel_18
+   \                     ??delay_us_1:
+   \   000016   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_18:
+   \   000019   C3           CLR     C
+   \   00001A   E8           MOV     A,R0
+   \   00001B   9A           SUBB    A,R2
+   \   00001C   E9           MOV     A,R1
+   \   00001D   9B           SUBB    A,R3
+   \   00001E   40F6         JC      ??delay_us_1
+    114                  for(i=0; i<s; i++);
+   \   000020   7800         MOV     R0,#0x0
+   \   000022   7900         MOV     R1,#0x0
+   \   000024   8003         SJMP    ??CrossCallReturnLabel_19
+   \                     ??delay_us_2:
+   \   000026   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_19:
+   \   000029   C3           CLR     C
+   \   00002A   E8           MOV     A,R0
+   \   00002B   9A           SUBB    A,R2
+   \   00002C   E9           MOV     A,R1
+   \   00002D   9B           SUBB    A,R3
+   \   00002E   40F6         JC      ??delay_us_2
+    115          	for(i=0; i<s; i++);
+   \   000030   7800         MOV     R0,#0x0
+   \   000032   7900         MOV     R1,#0x0
+   \   000034   8003         SJMP    ??CrossCallReturnLabel_20
+   \                     ??delay_us_3:
+   \   000036   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_20:
+   \   000039   C3           CLR     C
+   \   00003A   E8           MOV     A,R0
+   \   00003B   9A           SUBB    A,R2
+   \   00003C   E9           MOV     A,R1
+   \   00003D   9B           SUBB    A,R3
+   \   00003E   40F6         JC      ??delay_us_3
+    116          }
+   \   000040   02....       LJMP    ?BRET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   E8           MOV     A,R0
+   \   000001   2401         ADD     A,#0x1
+   \   000003   08           INC     R0
+   \   000004   E9           MOV     A,R1
+   \   000005   3400         ADDC    A,#0x0
+   \   000007   F9           MOV     R1,A
+   \   000008   22           RET
+    117          
+    118          
+    119          //******************************************************************************
+    120          //º¯ÊýÃû£ºvoid Write595(uint8 dat)
+    121          //ÊäÈë£ºÊý¾Ý
+    122          //Êä³ö£ºÎÞ
+    123          //¹¦ÄÜÃèÊö£º595Ð´Êý¾Ý£¬Ò»´ÎÐ´Èë8Î»
+    124          //******************************************************************************
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    125          void Write595(uint8 dat)
+   \                     Write595:
+    126          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    127          	
+    128          	uint8 ii;		
+    129          			
+    130          	for(ii = 0 ; ii < 8; ii++)
+   \   000000   7A08         MOV     R2,#0x8
+    131          	{
+    132          		if(dat & 0x80) 	LCD_595_DAT = 1;
+   \                     ??Write595_0:
+   \   000002   E9           MOV     A,R1
+   \   000003   A2E7         MOV     C,0xE0 /* A   */.7
+   \   000005   5004         JNC     ??Write595_1
+   \   000007   D2A0         SETB    0xa0.0
+   \   000009   8002         SJMP    ??Write595_2
+    133          		else		LCD_595_DAT = 0;
+   \                     ??Write595_1:
+   \   00000B   C2A0         CLR     0xa0.0
+    134          		
+    135          		dat <<= 1;
+   \                     ??Write595_2:
+   \   00000D   C3           CLR     C
+   \   00000E   33           RLC     A
+   \   00000F   F9           MOV     R1,A
+    136          		LCD_595_CK = 1;	
+   \   000010   D295         SETB    0x90.5
+    137          		LCD_595_CK = 0;
+   \   000012   C295         CLR     0x90.5
+    138          	}
+   \   000014   1A           DEC     R2
+   \   000015   EA           MOV     A,R2
+   \   000016   70EA         JNZ     ??Write595_0
+    139          	LCD_595_LD = 1;
+   \   000018   D293         SETB    0x90.3
+    140          	LCD_595_LD = 0;
+   \   00001A   C293         CLR     0x90.3
+    141          }
+   \   00001C   02....       LJMP    ?BRET
+   \   00001F                REQUIRE _A_P2
+   \   00001F                REQUIRE _A_P1
+    142          
+    143          
+    144          
+    145          
+    146          //*****************************************************************************
+    147          //*****************************************************************************
+    148          //º¯ÊýÃû£ºvoid delay(unsigned int n)
+    149          //¹¦ÄÜÃèÊö£ºÆÕÍ¨Í¢Ê±º¯Êý
+    150          //*****************************************************************************
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    151          void WriteLCD(uint8 fs, uint8 da)
+   \                     WriteLCD:
+    152          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   E9           MOV     A,R1
+   \   000006   FE           MOV     R6,A
+   \   000007   EA           MOV     A,R2
+   \   000008   FF           MOV     R7,A
+    153          	delay1(2);
+   \   000009                ; Setup parameters for call to function delay1
+   \   000009   7902         MOV     R1,#0x2
+   \   00000B   12....       LCALL   ??delay1?relay
+    154          	LCD_CS1 = 0;
+   \   00000E   C294         CLR     0x90.4
+    155          	LCD_RW = 0;			//Ð´²Ù×÷
+   \   000010   C281         CLR     0x80.1
+    156          	//delay1(0);	
+    157          
+    158          	if(fs){
+   \   000012   EE           MOV     A,R6
+   \   000013   6004         JZ      ??WriteLCD_0
+    159          		LCD_RS = 1;	
+   \   000015   D297         SETB    0x90.7
+   \   000017   8002         SJMP    ??WriteLCD_1
+    160          	}
+    161          	else{
+    162          		LCD_RS = 0;
+   \                     ??WriteLCD_0:
+   \   000019   C297         CLR     0x90.7
+    163          	}
+    164                 // delay1(0);
+    165          
+    166                  Write595(da);
+   \                     ??WriteLCD_1:
+   \   00001B                ; Setup parameters for call to function Write595
+   \   00001B   EF           MOV     A,R7
+   \   00001C   F9           MOV     R1,A
+   \   00001D   12....       LCALL   ??Write595?relay
+    167          	LCD_E = 1;// = 1;
+   \   000020   D296         SETB    0x90.6
+    168                  delay1(2);
+   \   000022                ; Setup parameters for call to function delay1
+   \   000022   7902         MOV     R1,#0x2
+   \   000024   12....       LCALL   ??delay1?relay
+    169          	LCD_E = 0;// = 0;					
+   \   000027   C296         CLR     0x90.6
+    170          	//delay1(0);
+    171          	LCD_CS1 = 1;
+   \   000029   D294         SETB    0x90.4
+    172          }
+   \   00002B   02....       LJMP    ?Subroutine14 & 0xFFFF
+   \   00002E                REQUIRE _A_P0
+   \   00002E                REQUIRE _A_P1
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine14:
+   \   000000   7F01         MOV     R7,#0x1
+   \   000002   02....       LJMP    ?BANKED_LEAVE_XDATA
+    173          /*
+    174          
+    175          uint8 ReadLCD(uint8 fs)
+    176          {
+    177          	uint8 temp = 0;
+    178          	LCD_CS1 = 0;
+    179          	NOP;
+    180          	NOP;
+    181          	NOP;
+    182          	NOP;
+    183          	do{						
+    184          		LCD_RW = 1;
+    185          		LCD_RS = 0;
+    186          		LCD_E = 1;
+    187          		NOP;
+    188          		NOP;							
+    189          		temp = P1 & 0x80;			
+    190          		LCD_E = 0;			
+    191          
+    192          	}while(temp != 0);	
+    193          
+    194          	if(fs){
+    195          		LCD_RS = 1;	
+    196          	}
+    197          	else{
+    198          		LCD_RS = 0;
+    199          	}
+    200          	
+    201          	LCD_E = 1;
+    202          	NOP;	
+    203          	NOP;
+    204          	NOP;
+    205          	NOP;	
+    206          	temp = P1;	
+    207          	LCD_E = 0;	
+    208          	LCD_CS1 = 1;
+    209          	return(temp);
+    210          }
+    211          
+    212          
+    213          */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    214          void SetRamAddr(uint8 x ,uint8 y)
+   \                     SetRamAddr:
+    215          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV     A,R2
+   \   000006   FE           MOV     R6,A
+    216          	uint8 temp;
+    217          	
+    218          	temp = 0x0f & x;
+    219          	WriteLCD(COMMAND , PageAddr|temp);
+   \   000007                ; Setup parameters for call to function WriteLCD
+   \   000007   740F         MOV     A,#0xf
+   \   000009   59           ANL     A,R1
+   \   00000A   44B0         ORL     A,#0xb0
+   \   00000C   FA           MOV     R2,A
+   \   00000D   7900         MOV     R1,#0x0
+   \   00000F   12....       LCALL   ??WriteLCD?relay
+    220          
+    221          	temp = 0x0f & (y >> 4);
+    222          	WriteLCD(COMMAND , ColAddrHi|temp);
+   \   000012                ; Setup parameters for call to function WriteLCD
+   \   000012   EE           MOV     A,R6
+   \   000013   C4           SWAP    A
+   \   000014   540F         ANL     A,#0xf
+   \   000016   4410         ORL     A,#0x10
+   \   000018   FA           MOV     R2,A
+   \   000019   7900         MOV     R1,#0x0
+   \   00001B   12....       LCALL   ??WriteLCD?relay
+    223          	temp = 0x0f & y;
+    224          	WriteLCD(COMMAND , ColAddrLo|temp);
+   \   00001E                ; Setup parameters for call to function WriteLCD
+   \   00001E   740F         MOV     A,#0xf
+   \   000020                REQUIRE ?Subroutine13
+   \   000020                ; // Fall through to label ?Subroutine13
+    225          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine13:
+   \   000000   12....       LCALL   ?Subroutine4 & 0xFFFF
+   \                     ??CrossCallReturnLabel_35:
+   \   000003   02....       LJMP    ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine4:
+   \   000000   5E           ANL     A,R6
+   \   000001   FA           MOV     R2,A
+   \   000002   7900         MOV     R1,#0x0
+   \   000004   12....       LCALL   ??WriteLCD?relay
+   \   000007   7F01         MOV     R7,#0x1
+   \   000009   22           RET
+    226          
+    227          
+    228          /*******************************************************************************
+    229          //º¯ÊýÃû£ºvoid SetContrast(uint8 Gain, uint8 Step)
+    230          //¹¦ÄÜ£ºlcd¶Ô±È¶ÈÉè¶¨
+    231          //ÊäÈë£ºPage-Ò³£¬Col-ÁÐ
+    232          //Êä³ö£ºÎÞ
+    233          ********************************************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    234          void SetContrast(uint8 Gain, uint8 Step)
+   \                     SetContrast:
+    235          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV     A,R2
+   \   000006   FE           MOV     R6,A
+    236          	WriteLCD(COMMAND , IntRegRatio | (0x0f & Gain)); 	//Éè¶¨ÄÚ²¿µç×è
+   \   000007                ; Setup parameters for call to function WriteLCD
+   \   000007   740F         MOV     A,#0xf
+   \   000009   59           ANL     A,R1
+   \   00000A   4420         ORL     A,#0x20
+   \   00000C   FA           MOV     R2,A
+   \   00000D   12....       LCALL   ?Subroutine3 & 0xFFFF
+    237          	WriteLCD(COMMAND , ContCtrlReg); 			//Éè¶¨ÄÚ²¿¶Ô±È¿ØÖÆÆ÷
+    238          	WriteLCD(COMMAND , 0x3f & Step);
+   \                     ??CrossCallReturnLabel_21:
+   \   000010                ; Setup parameters for call to function WriteLCD
+   \   000010   743F         MOV     A,#0x3f
+   \   000012   80..         SJMP    ?Subroutine13
+    239          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   7900         MOV     R1,#0x0
+   \   000002   12....       LCALL   ??WriteLCD?relay
+   \   000005                ; Setup parameters for call to function WriteLCD
+   \   000005                ; Setup parameters for call to function WriteLCD
+   \   000005   7A81         MOV     R2,#-0x7f
+   \   000007   7900         MOV     R1,#0x0
+   \   000009   12....       LCALL   ??WriteLCD?relay
+   \   00000C   22           RET
+    240          
+    241          
+    242          
+    243          /*******************************************************************************
+    244          //º¯ÊýÃû£ºvoid InitDisplay(void)
+    245          //¹¦ÄÜ£ºlcdÉè¶¨ÎªÕý³£ÏÔÊ¾×´Ì¬
+    246          //ÊäÈë£ºÎÞ
+    247          //Êä³ö£ºÎÞ
+    248          ********************************************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    249          void InitDisplay(void)
+   \                     InitDisplay:
+    250          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    251          	WriteLCD(COMMAND , DisplayOff);			//¹ØÏÔÊ¾
+   \   000004                ; Setup parameters for call to function WriteLCD
+   \   000004   7AAE         MOV     R2,#-0x52
+   \   000006   7900         MOV     R1,#0x0
+   \   000008   12....       LCALL   ??WriteLCD?relay
+    252          	WriteLCD(COMMAND , SegRemapOn);    			//ks0713/ssd1815
+   \   00000B                ; Setup parameters for call to function WriteLCD
+   \   00000B   7AA1         MOV     R2,#-0x5f
+   \   00000D   7900         MOV     R1,#0x0
+   \   00000F   12....       LCALL   ??WriteLCD?relay
+    253          	WriteLCD(COMMAND , ComRemapOn);    			//ssd1815
+   \   000012                ; Setup parameters for call to function WriteLCD
+   \   000012   7AC8         MOV     R2,#-0x38
+   \   000014   7900         MOV     R1,#0x0
+   \   000016   12....       LCALL   ??WriteLCD?relay
+    254          	SetContrast(iIntRegValue, iContCtrlRegValue); 	//Éè¶¨È±Ê¡¶Ô±È¶È
+   \   000019                ; Setup parameters for call to function SetContrast
+   \   000019   7A10         MOV     R2,#0x10
+   \   00001B   7901         MOV     R1,#0x1
+   \   00001D   12....       LCALL   ??SetContrast?relay
+    255          	WriteLCD(COMMAND , PwrCtrlReg | IntVolBstr | IntReg | OPampBuffer); //turn on booster, regulator & divider
+   \   000020                ; Setup parameters for call to function WriteLCD
+   \   000020   7A2F         MOV     R2,#0x2f
+   \   000022   7900         MOV     R1,#0x0
+   \   000024   12....       LCALL   ??WriteLCD?relay
+    256          	WriteLCD(COMMAND , DisplayOn);				//¿ªÏÔÊ¾
+   \   000027                ; Setup parameters for call to function WriteLCD
+   \   000027   7AAF         MOV     R2,#-0x51
+   \   000029   7900         MOV     R1,#0x0
+   \   00002B   12....       LCALL   ??WriteLCD?relay
+    257          }
+   \   00002E                REQUIRE ?Subroutine12
+   \   00002E                ; // Fall through to label ?Subroutine12
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine12:
+   \   000000   D083         POP     DPH
+   \   000002   D082         POP     DPL
+   \   000004   02....       LJMP    ?BRET
+    258          
+    259          
+    260          /*******************************************************************************
+    261          //º¯ÊýÃû£ºvoid contrastctrl(uint8 start,stop)
+    262          //¹¦ÄÜ£ºlcd¶Ô±È¶Èµ÷Õû
+    263          //ÊäÈë£ºÎÞ
+    264          //Êä³ö£ºÎÞ
+    265          ********************************************************************************/
+    266          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    267          void contrastctrl(uint8 start, uint8 stop)
+   \                     contrastctrl:
+    268          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV     A,R2
+   \   000006   FF           MOV     R7,A
+    269          	uint8 i;
+    270          	if (start < stop)
+   \   000007   E9           MOV     A,R1
+   \   000008   C3           CLR     C
+   \   000009   9F           SUBB    A,R7
+   \   00000A   E9           MOV     A,R1
+   \   00000B   FE           MOV     R6,A
+   \   00000C   5025         JNC     ??contrastctrl_0
+    271          	{
+    272          		for (i=start; i<stop; i+=1)
+    273          		{
+    274          			SetContrast(iIntRegValue, i); //slowly turn on display
+   \                     ??contrastctrl_1:
+   \   00000E                ; Setup parameters for call to function SetContrast
+   \   00000E   EE           MOV     A,R6
+   \   00000F   FA           MOV     R2,A
+   \   000010   7901         MOV     R1,#0x1
+   \   000012   12....       LCALL   ??SetContrast?relay
+    275          			delay_us(80);
+   \   000015                ; Setup parameters for call to function delay_us
+   \   000015   7A50         MOV     R2,#0x50
+   \   000017   7B00         MOV     R3,#0x0
+   \   000019   12....       LCALL   ??delay_us?relay
+    276          		}
+   \   00001C   0E           INC     R6
+   \   00001D   EE           MOV     A,R6
+   \   00001E   C3           CLR     C
+   \   00001F   9F           SUBB    A,R7
+   \   000020   5016         JNC     ??contrastctrl_2
+   \   000022   80EA         SJMP    ??contrastctrl_1
+    277          	}
+    278          	else
+    279          	{
+    280          		for (i=start; i>stop; i-=1)
+    281          		{
+    282          			SetContrast(iIntRegValue, i); //slowly turn off display
+   \                     ??contrastctrl_3:
+   \   000024                ; Setup parameters for call to function SetContrast
+   \   000024   EE           MOV     A,R6
+   \   000025   FA           MOV     R2,A
+   \   000026   7901         MOV     R1,#0x1
+   \   000028   12....       LCALL   ??SetContrast?relay
+    283          			delay_us(120);
+   \   00002B                ; Setup parameters for call to function delay_us
+   \   00002B   7A78         MOV     R2,#0x78
+   \   00002D   7B00         MOV     R3,#0x0
+   \   00002F   12....       LCALL   ??delay_us?relay
+    284          		}
+   \   000032   1E           DEC     R6
+   \                     ??contrastctrl_0:
+   \   000033   EF           MOV     A,R7
+   \   000034   C3           CLR     C
+   \   000035   9E           SUBB    A,R6
+   \   000036   40EC         JC      ??contrastctrl_3
+    285          	}
+    286          }
+   \                     ??contrastctrl_2:
+   \   000038   80..         SJMP    ?Subroutine14
+    287          
+    288          
+    289          
+    290          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    291          void ClearScreen(void)
+   \                     ClearScreen:
+    292          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+    293           	uint8 x,y;
+    294          	for(x = 0;x < 8 ;x++){
+   \   000005   7F00         MOV     R7,#0x0
+    295                    SetRamAddr(x , 0);
+   \                     ??ClearScreen_0:
+   \   000007                ; Setup parameters for call to function SetRamAddr
+   \   000007   7A00         MOV     R2,#0x0
+   \   000009   EF           MOV     A,R7
+   \   00000A   F9           MOV     R1,A
+   \   00000B   12....       LCALL   ??SetRamAddr?relay
+    296          	  	for(y = 0 ; y < 128 ; y++){	  		
+   \   00000E   7E80         MOV     R6,#-0x80
+    297          	  					
+    298          			WriteLCD(DATA , 0x00);
+   \                     ??ClearScreen_1:
+   \   000010                ; Setup parameters for call to function WriteLCD
+   \   000010   7A00         MOV     R2,#0x0
+   \   000012   7901         MOV     R1,#0x1
+   \   000014   12....       LCALL   ??WriteLCD?relay
+    299          		}		
+   \   000017   1E           DEC     R6
+   \   000018   EE           MOV     A,R6
+   \   000019   70F5         JNZ     ??ClearScreen_1
+    300          	}
+   \   00001B   0F           INC     R7
+   \   00001C   EF           MOV     A,R7
+   \   00001D   C3           CLR     C
+   \   00001E   9408         SUBB    A,#0x8
+   \   000020   40E5         JC      ??ClearScreen_0
+    301          }
+   \   000022                REQUIRE ?Subroutine14
+   \   000022                ; // Fall through to label ?Subroutine14
+    302          
+    303          
+    304          
+    305          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    306          void HalLcdInit(void)
+   \                     HalLcdInit:
+    307          {	
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    308                  delay_us(10000);
+   \   000004                ; Setup parameters for call to function delay_us
+   \   000004   7A10         MOV     R2,#0x10
+   \   000006   7B27         MOV     R3,#0x27
+   \   000008   12....       LCALL   ??delay_us?relay
+    309                  P1DIR |= 0xFC;
+   \   00000B   43FEFC       ORL     0xfe,#0xfc
+   \   00000E   E5FE         MOV     A,0xfe
+    310                  P2DIR |= 0x01;
+   \   000010   43FF01       ORL     0xff,#0x1
+    311                  P0DIR |= 0x02;
+   \   000013   43FD02       ORL     0xfd,#0x2
+    312                  P1_2 = 0;
+   \   000016   C292         CLR     0x90.2
+    313          	delay_us(100);	
+   \   000018                ; Setup parameters for call to function delay_us
+   \   000018   7A64         MOV     R2,#0x64
+   \   00001A   7B00         MOV     R3,#0x0
+   \   00001C   12....       LCALL   ??delay_us?relay
+    314          	WriteLCD(COMMAND , 0xE2);//¸´Î»
+   \   00001F                ; Setup parameters for call to function WriteLCD
+   \   00001F   7AE2         MOV     R2,#-0x1e
+   \   000021   12....       LCALL   ?Subroutine0 & 0xFFFF
+    315          
+    316          	delay_us(100);
+    317          	WriteLCD(COMMAND , 0xA3);
+   \                     ??CrossCallReturnLabel_0:
+   \   000024                ; Setup parameters for call to function WriteLCD
+   \   000024   7AA3         MOV     R2,#-0x5d
+   \   000026   12....       LCALL   ?Subroutine0 & 0xFFFF
+    318          
+    319          	delay_us(100);	
+    320          	WriteLCD(COMMAND , 0xA0);
+   \                     ??CrossCallReturnLabel_1:
+   \   000029                ; Setup parameters for call to function WriteLCD
+   \   000029   7AA0         MOV     R2,#-0x60
+   \   00002B   12....       LCALL   ?Subroutine0 & 0xFFFF
+    321          	
+    322          	delay_us(100);
+    323          	WriteLCD(COMMAND , 0xC8);
+   \                     ??CrossCallReturnLabel_2:
+   \   00002E                ; Setup parameters for call to function WriteLCD
+   \   00002E   7AC8         MOV     R2,#-0x38
+   \   000030   12....       LCALL   ?Subroutine0 & 0xFFFF
+    324          
+    325          	delay_us(100);	
+    326          	WriteLCD(COMMAND , 0x24);
+   \                     ??CrossCallReturnLabel_3:
+   \   000033                ; Setup parameters for call to function WriteLCD
+   \   000033   7A24         MOV     R2,#0x24
+   \   000035   12....       LCALL   ?Subroutine0 & 0xFFFF
+    327          	
+    328          	delay_us(100);
+    329          	WriteLCD(COMMAND , 0x81);
+   \                     ??CrossCallReturnLabel_4:
+   \   000038                ; Setup parameters for call to function WriteLCD
+   \   000038   7A81         MOV     R2,#-0x7f
+   \   00003A   12....       LCALL   ?Subroutine0 & 0xFFFF
+    330          
+    331          	delay_us(100);	
+    332          	WriteLCD(COMMAND , 0x14);
+   \                     ??CrossCallReturnLabel_5:
+   \   00003D                ; Setup parameters for call to function WriteLCD
+   \   00003D   7A14         MOV     R2,#0x14
+   \   00003F   12....       LCALL   ?Subroutine0 & 0xFFFF
+    333          	
+    334          	delay_us(100);
+    335          	WriteLCD(COMMAND , 0x2F);
+   \                     ??CrossCallReturnLabel_6:
+   \   000042                ; Setup parameters for call to function WriteLCD
+   \   000042   7A2F         MOV     R2,#0x2f
+   \   000044   12....       LCALL   ?Subroutine0 & 0xFFFF
+    336          
+    337          	delay_us(100);	
+    338          	WriteLCD(COMMAND , 0x40);//´ÓµÚÒ»ÁÐ¿ªÊ¼ÏÔÊ¾
+   \                     ??CrossCallReturnLabel_7:
+   \   000047                ; Setup parameters for call to function WriteLCD
+   \   000047   7A40         MOV     R2,#0x40
+   \   000049   12....       LCALL   ?Subroutine0 & 0xFFFF
+    339          	
+    340          	delay_us(100);
+    341          	WriteLCD(COMMAND , 0xB0);
+   \                     ??CrossCallReturnLabel_8:
+   \   00004C                ; Setup parameters for call to function WriteLCD
+   \   00004C   7AB0         MOV     R2,#-0x50
+   \   00004E   12....       LCALL   ?Subroutine0 & 0xFFFF
+    342          
+    343          	delay_us(100);	
+    344          	WriteLCD(COMMAND , 0x10);
+   \                     ??CrossCallReturnLabel_9:
+   \   000051                ; Setup parameters for call to function WriteLCD
+   \   000051   7A10         MOV     R2,#0x10
+   \   000053   12....       LCALL   ?Subroutine0 & 0xFFFF
+    345          	
+    346          	delay_us(100);
+    347          	WriteLCD(COMMAND , 0x00);
+   \                     ??CrossCallReturnLabel_10:
+   \   000056                ; Setup parameters for call to function WriteLCD
+   \   000056   7A00         MOV     R2,#0x0
+   \   000058   12....       LCALL   ?Subroutine0 & 0xFFFF
+    348          
+    349          	delay_us(100);	
+    350          	WriteLCD(COMMAND , 0xAF);
+   \                     ??CrossCallReturnLabel_11:
+   \   00005B                ; Setup parameters for call to function WriteLCD
+   \   00005B   7AAF         MOV     R2,#-0x51
+   \   00005D   12....       LCALL   ?Subroutine3 & 0xFFFF
+    351          
+    352          	WriteLCD(COMMAND , 0x81);
+    353          	WriteLCD(COMMAND , 0x1b);
+   \                     ??CrossCallReturnLabel_22:
+   \   000060                ; Setup parameters for call to function WriteLCD
+   \   000060   7A1B         MOV     R2,#0x1b
+   \   000062   12....       LCALL   ?Subroutine0 & 0xFFFF
+    354                  delay_us(100);	
+    355                  SetContrast(iIntRegValuea,ContrastValue);
+   \                     ??CrossCallReturnLabel_12:
+   \   000065                ; Setup parameters for call to function SetContrast
+   \   000065   90....       MOV     DPTR,#ContrastValue
+   \   000068   E0           MOVX    A,@DPTR
+   \   000069   FA           MOV     R2,A
+   \   00006A   7914         MOV     R1,#0x14
+   \   00006C   12....       LCALL   ??SetContrast?relay
+    356          	ClearScreen();
+   \   00006F                ; Setup parameters for call to function ClearScreen
+   \   00006F   12....       LCALL   ??ClearScreen?relay
+    357                 // HalLcdWriteString("IEEE:",1);
+    358                 // HalLcdWriteString("Init lcd",2);
+    359                // HalLcdWriteString("Init lcd",3);
+    360                //  PrintCh8(30,30,'O',1);
+    361          }
+   \   000072   02....       LJMP    ?Subroutine12 & 0xFFFF
+   \   000075                REQUIRE _A_P1
+   \   000075                REQUIRE P0DIR
+   \   000075                REQUIRE P1DIR
+   \   000075                REQUIRE P2DIR
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   7900         MOV     R1,#0x0
+   \   000002   12....       LCALL   ??WriteLCD?relay
+   \   000005                ; Setup parameters for call to function delay_us
+   \   000005                ; Setup parameters for call to function delay_us
+   \   000005                ; Setup parameters for call to function delay_us
+   \   000005                ; Setup parameters for call to function delay_us
+   \   000005                ; Setup parameters for call to function delay_us
+   \   000005                ; Setup parameters for call to function delay_us
+   \   000005                ; Setup parameters for call to function delay_us
+   \   000005                ; Setup parameters for call to function delay_us
+   \   000005                ; Setup parameters for call to function delay_us
+   \   000005                ; Setup parameters for call to function delay_us
+   \   000005                ; Setup parameters for call to function delay_us
+   \   000005                ; Setup parameters for call to function delay_us
+   \   000005                ; Setup parameters for call to function delay_us
+   \   000005   7A64         MOV     R2,#0x64
+   \   000007   7B00         MOV     R3,#0x0
+   \   000009   12....       LCALL   ??delay_us?relay
+   \   00000C   22           RET
+    362          
+    363          
+    364          
+    365          /*******************************************************************************
+    366          //º¯ÊýÃû£ºvoid Print6(uint8 xx, uint8 yy, uint8 ch1[], uint8 yn)
+    367          //¹¦ÄÜ£ºÏÔÊ¾6*8×Ö·û´®
+    368          //ÊäÈë£ºxx ,yy ×ø±ê,ch1´ýÏÔÊ¾µÄ×Ö·û´®,ynÊÇ·ñ·´ºÚ
+    369          //Êä³ö£ºÎÞ
+    370          ********************************************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    371          void Print6(uint8 xx, uint8 yy, uint8 ch1[], uint8 yn)		
+   \                     Print6:
+    372          {
+   \   000000   74F0         MOV     A,#-0x10
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 16
+   \   000005                ; Auto size: 0
+   \   000005   89..         MOV     ?V0 + 2,R1
+   \   000007   8A..         MOV     ?V0 + 0,R2
+   \   000009   8C..         MOV     ?V0 + 6,R4
+   \   00000B   8D..         MOV     ?V0 + 7,R5
+   \   00000D   8B..         MOV     ?V0 + 3,R3
+    373          	uint8 ii = 0;
+    374          	uint8 bb = 0;
+   \   00000F   75..00       MOV     ?V0 + 1,#0x0
+    375          	unsigned int index = 0 ;	
+   \   000012   8017         SJMP    ??Print6_0
+    376          			
+    377          	while(ch1[bb] != '\0')
+    378          	{
+    379                          index = (unsigned int)(ch1[bb] - 0x20);
+    380          		index = (unsigned int)index*6;		
+    381          		for(ii=0;ii<6;ii++)
+    382          		{
+    383          			SetRamAddr(xx , yy);
+    384          			if(yn == 0)
+    385          			{
+    386          				WriteLCD(DATA, ~FontSystem6x8[index]);
+    387          				
+    388          			}
+    389          			else
+    390          			{
+    391          				WriteLCD(DATA, FontSystem6x8[index]);
+   \                     ??Print6_1:
+   \   000014                ; Setup parameters for call to function WriteLCD
+   \   000014   7901         MOV     R1,#0x1
+   \   000016   12....       LCALL   ??WriteLCD?relay
+    392          			}		
+    393          			index += 1;
+   \   000019   EE           MOV     A,R6
+   \   00001A   2401         ADD     A,#0x1
+   \   00001C   0E           INC     R6
+   \   00001D   EF           MOV     A,R7
+   \   00001E   3400         ADDC    A,#0x0
+   \   000020   FF           MOV     R7,A
+    394          			yy += 1;
+   \   000021   05..         INC     ?V0 + 0
+   \   000023   15..         DEC     ?V0 + 4
+   \   000025   E5..         MOV     A,?V0 + 4
+   \   000027   7030         JNZ     ??Print6_2
+    395          		}		
+    396          		bb += 1;
+   \   000029   05..         INC     ?V0 + 1
+   \                     ??Print6_0:
+   \   00002B   85....       MOV     ?V0 + 4,?V0 + 1
+   \   00002E   E5..         MOV     A,?V0 + 6
+   \   000030   25..         ADD     A,?V0 + 4
+   \   000032   F582         MOV     DPL,A
+   \   000034   E5..         MOV     A,?V0 + 7
+   \   000036   3400         ADDC    A,#0x0
+   \   000038   F583         MOV     DPH,A
+   \   00003A   E0           MOVX    A,@DPTR
+   \   00003B   6039         JZ      ??Print6_3
+   \   00003D   F8           MOV     R0,A
+   \   00003E   74E0         MOV     A,#-0x20
+   \   000040   28           ADD     A,R0
+   \   000041   FE           MOV     R6,A
+   \   000042   74FF         MOV     A,#-0x1
+   \   000044   3400         ADDC    A,#0x0
+   \   000046   FF           MOV     R7,A
+   \   000047   EE           MOV     A,R6
+   \   000048   75F006       MOV     B,#0x6
+   \   00004B   A4           MUL     AB
+   \   00004C   FE           MOV     R6,A
+   \   00004D   AAF0         MOV     R2,B
+   \   00004F   75F006       MOV     B,#0x6
+   \   000052   EF           MOV     A,R7
+   \   000053   A4           MUL     AB
+   \   000054   2A           ADD     A,R2
+   \   000055   FF           MOV     R7,A
+   \   000056   75..06       MOV     ?V0 + 4,#0x6
+   \                     ??Print6_2:
+   \   000059                ; Setup parameters for call to function SetRamAddr
+   \   000059   AA..         MOV     R2,?V0 + 0
+   \   00005B   A9..         MOV     R1,?V0 + 2
+   \   00005D   12....       LCALL   ??SetRamAddr?relay
+   \   000060   EE           MOV     A,R6
+   \   000061   24..         ADD     A,#(FontSystem6x8 & 0xff)
+   \   000063   F582         MOV     DPL,A
+   \   000065   EF           MOV     A,R7
+   \   000066   34..         ADDC    A,#((FontSystem6x8 >> 8) & 0xff)
+   \   000068   F583         MOV     DPH,A
+   \   00006A   E4           CLR     A
+   \   00006B   93           MOVC    A,@A+DPTR
+   \   00006C   FA           MOV     R2,A
+   \   00006D   E5..         MOV     A,?V0 + 3
+   \   00006F   70A3         JNZ     ??Print6_1
+   \   000071                ; Setup parameters for call to function WriteLCD
+   \   000071   EA           MOV     A,R2
+   \   000072   F4           CPL     A
+   \   000073   FA           MOV     R2,A
+   \   000074   809E         SJMP    ??Print6_1
+    397          	}
+    398          }
+   \                     ??Print6_3:
+   \   000076   80..         SJMP    ??Subroutine16_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine16_0:
+   \   000000   7F08         MOV     R7,#0x8
+   \   000002   02....       LJMP    ?BANKED_LEAVE_XDATA
+    399          
+    400          
+    401          //*******************************************************************************
+    402          //º¯ÊýÃû£ºvoid Printn8(uint8 xx ,uint8 yy , uint32 no,uint8 yn,uint8 le)
+    403          //¹¦ÄÜ£ºÏÔÊ¾8*8Ò»¸öÎÞ·ûºÅÊý¾Ý
+    404          //ÊäÈë£ºxx , yyÆÁÄ»µ±ÖÐÎ»ÖÃ,no´ýÏÔÊ¾Êý¾Ý yn=0Õý³£ÏÔÊ¾ yn=1·´ºÚÏÔÊ¾  leÓÐÐ§Î»
+    405          //Êä³ö£ºÎÞ
+    406          //*******************************************************************************
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine15:
+   \   000000   12....       LCALL   ?DEALLOC_XSTACK8
+   \   000003                REQUIRE ??Subroutine16_0
+   \   000003                ; // Fall through to label ??Subroutine16_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    407          void Printn8(uint8 xx ,uint8 yy , uint32 no,uint8 yn,uint8 le)
+   \                     Printn8:
+    408          {
+   \   000000   74F0         MOV     A,#-0x10
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 16
+   \   000005                ; Auto size: 9
+   \   000005   74F7         MOV     A,#-0x9
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+   \   00000A   7402         MOV     A,#0x2
+   \   00000C   12....       LCALL   ?XSTACK_DISP0_8
+   \   00000F   E9           MOV     A,R1
+   \   000010   F0           MOVX    @DPTR,A
+   \   000011   7401         MOV     A,#0x1
+   \   000013   12....       LCALL   ?XSTACK_DISP0_8
+   \   000016   EA           MOV     A,R2
+   \   000017   F0           MOVX    @DPTR,A
+   \   000018   EB           MOV     A,R3
+   \   000019   85..82       MOV     DPL,?XSP + 0
+   \   00001C   85..83       MOV     DPH,?XSP + 1
+   \   00001F   F0           MOVX    @DPTR,A
+    409          	uint8 ch2[6];
+    410          	uint8 ii;
+    411          
+    412          	for(ii = 1 ; ii <= le ;){
+   \   000020   7A01         MOV     R2,#0x1
+   \   000022   806C         SJMP    ??Printn8_0
+    413          		ch2[le - ii] = no % 10 + 0x30;
+   \                     ??Printn8_1:
+   \   000024   7419         MOV     A,#0x19
+   \   000026   12....       LCALL   ?XSTACK_DISP0_8
+   \   000029   78..         MOV     R0,#?V0 + 4
+   \   00002B   12....       LCALL   ?L_MOV_X
+   \   00002E   90....       MOV     DPTR,#__Constant_a
+   \   000031   78..         MOV     R0,#?V0 + 0
+   \   000033   12....       LCALL   ?L_MOV_X
+   \   000036   78..         MOV     R0,#?V0 + 4
+   \   000038   79..         MOV     R1,#?V0 + 0
+   \   00003A   12....       LCALL   ?UL_DIV_MOD
+   \   00003D   E5..         MOV     A,?V0 + 0
+   \   00003F   2430         ADD     A,#0x30
+   \   000041   C0E0         PUSH    A
+   \   000043   8A..         MOV     ?V0 + 0,R2
+   \   000045   EC           MOV     A,R4
+   \   000046   C3           CLR     C
+   \   000047   95..         SUBB    A,?V0 + 0
+   \   000049   F8           MOV     R0,A
+   \   00004A   E4           CLR     A
+   \   00004B   9400         SUBB    A,#0x0
+   \   00004D   F9           MOV     R1,A
+   \   00004E   7403         MOV     A,#0x3
+   \   000050   12....       LCALL   ?XSTACK_DISP0_8
+   \   000053   E582         MOV     A,DPL
+   \   000055   28           ADD     A,R0
+   \   000056   F582         MOV     DPL,A
+   \   000058   E583         MOV     A,DPH
+   \   00005A   39           ADDC    A,R1
+   \   00005B   F583         MOV     DPH,A
+   \   00005D   D0E0         POP     A
+   \   00005F   F0           MOVX    @DPTR,A
+    414          		no /= 10;
+   \   000060   7419         MOV     A,#0x19
+   \   000062   12....       LCALL   ?XSTACK_DISP0_8
+   \   000065   78..         MOV     R0,#?V0 + 4
+   \   000067   12....       LCALL   ?L_MOV_X
+   \   00006A   90....       MOV     DPTR,#__Constant_a
+   \   00006D   78..         MOV     R0,#?V0 + 0
+   \   00006F   12....       LCALL   ?L_MOV_X
+   \   000072   78..         MOV     R0,#?V0 + 4
+   \   000074   79..         MOV     R1,#?V0 + 0
+   \   000076   12....       LCALL   ?UL_DIV_MOD
+   \   000079   85....       MOV     ?V0 + 0,?V0 + 4
+   \   00007C   85....       MOV     ?V0 + 1,?V0 + 5
+   \   00007F   85....       MOV     ?V0 + 2,?V0 + 6
+   \   000082   85....       MOV     ?V0 + 3,?V0 + 7
+   \   000085   7419         MOV     A,#0x19
+   \   000087   12....       LCALL   ?XSTACK_DISP0_8
+   \   00008A   78..         MOV     R0,#?V0 + 0
+   \   00008C   12....       LCALL   ?L_MOV_TO_X
+    415          		ii += 1;
+   \   00008F   0A           INC     R2
+    416          	}
+   \                     ??Printn8_0:
+   \   000090   EC           MOV     A,R4
+   \   000091   C3           CLR     C
+   \   000092   9A           SUBB    A,R2
+   \   000093   508F         JNC     ??Printn8_1
+    417          	ch2[le] = '\0';
+   \   000095   8C..         MOV     ?V0 + 0,R4
+   \   000097   7403         MOV     A,#0x3
+   \   000099   12....       LCALL   ?XSTACK_DISP0_8
+   \   00009C   12....       LCALL   ?Subroutine9 & 0xFFFF
+    418          	Print8(xx ,yy ,ch2 ,yn);
+   \                     ??CrossCallReturnLabel_31:
+   \   00009F                ; Setup parameters for call to function Print8
+   \   00009F   85..82       MOV     DPL,?XSP + 0
+   \   0000A2   85..83       MOV     DPH,?XSP + 1
+   \   0000A5   E0           MOVX    A,@DPTR
+   \   0000A6   F5..         MOV     ?V0 + 0,A
+   \   0000A8   75..00       MOV     ?V0 + 1,#0x0
+   \   0000AB   78..         MOV     R0,#?V0 + 0
+   \   0000AD   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   0000B0   7405         MOV     A,#0x5
+   \   0000B2   12....       LCALL   ?XSTACK_DISP0_8
+   \   0000B5   8582..       MOV     ?V0 + 0,DPL
+   \   0000B8   8583..       MOV     ?V0 + 1,DPH
+   \   0000BB   78..         MOV     R0,#?V0 + 0
+   \   0000BD   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   0000C0   7405         MOV     A,#0x5
+   \   0000C2   12....       LCALL   ?XSTACK_DISP0_8
+   \   0000C5   E0           MOVX    A,@DPTR
+   \   0000C6   FC           MOV     R4,A
+   \   0000C7   7D00         MOV     R5,#0x0
+   \   0000C9   7406         MOV     A,#0x6
+   \   0000CB   12....       LCALL   ?XSTACK_DISP0_8
+   \   0000CE   E0           MOVX    A,@DPTR
+   \   0000CF   12....       LCALL   ?Subroutine10 & 0xFFFF
+   \                     ??CrossCallReturnLabel_36:
+   \   0000D2   12....       LCALL   ?DEALLOC_XSTACK8
+    419          }
+   \   0000D5   7409         MOV     A,#0x9
+   \   0000D7   02....       LJMP    ?Subroutine15 & 0xFFFF
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine10:
+   \   000000   FA           MOV     R2,A
+   \   000001                REQUIRE ??Subroutine17_0
+   \   000001                ; // Fall through to label ??Subroutine17_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine17_0:
+   \   000000   7B00         MOV     R3,#0x0
+   \   000002   12....       LCALL   ??Print8?relay
+   \   000005   7404         MOV     A,#0x4
+   \   000007   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine9:
+   \   000000   E582         MOV     A,DPL
+   \   000002   25..         ADD     A,?V0 + 0
+   \   000004   F582         MOV     DPL,A
+   \   000006   E583         MOV     A,DPH
+   \   000008   3400         ADDC    A,#0x0
+   \   00000A   F583         MOV     DPH,A
+   \   00000C   E4           CLR     A
+   \   00000D   F0           MOVX    @DPTR,A
+   \   00000E   22           RET
+    420          
+    421          /*******************************************************************************
+    422          //º¯ÊýÃû£ºvoid Print8(uint16 y,uint16 x, uint8 ch,uint16 yn)
+    423          //¹¦ÄÜ£ºÏÔÊ¾8*8×Ö·û
+    424          //ÊäÈë£ºxx ,yy ×ø±ê,ch´ýÏÔÊ¾µÄ×Ö·û,ynÊÇ·ñ·´ºÚ
+    425          //Êä³ö£ºÎÞ
+    426          ********************************************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    427          void PrintCh8(uint16 y,uint16 x, uint8 ch,uint16 yn)
+   \                     PrintCh8:
+    428          {
+   \   000000   74F0         MOV     A,#-0x10
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 16
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV     A,R2
+   \   000006   FE           MOV     R6,A
+   \   000007   8C..         MOV     ?V0 + 0,R4
+   \   000009   7410         MOV     A,#0x10
+   \   00000B   12....       LCALL   ?XSTACK_DISP0_8
+   \   00000E   E0           MOVX    A,@DPTR
+   \   00000F   F5..         MOV     ?V0 + 6,A
+   \   000011   A3           INC     DPTR
+   \   000012   E0           MOVX    A,@DPTR
+   \   000013   F5..         MOV     ?V0 + 7,A
+    429          	uint8 wm;
+    430          	uint16 adder;
+    431          	
+    432          	adder = (ch - 0x20) * 16;
+   \   000015   89..         MOV     ?V0 + 2,R1
+   \   000017   74E0         MOV     A,#-0x20
+   \   000019   25..         ADD     A,?V0 + 2
+   \   00001B   12....       LCALL   ?Subroutine5 & 0xFFFF
+   \                     ??CrossCallReturnLabel_23:
+   \   00001E   12....       LCALL   ?S_SHL
+   \   000021   85....       MOV     ?V0 + 2,?V0 + 4
+   \   000024   85....       MOV     ?V0 + 3,?V0 + 5
+    433          	for(wm = 0;wm < 8;wm++)
+   \   000027   75..08       MOV     ?V0 + 4,#0x8
+    434          	{
+    435          		SetRamAddr(y , x);
+   \                     ??PrintCh8_0:
+   \   00002A                ; Setup parameters for call to function SetRamAddr
+   \   00002A   12....       LCALL   ?Subroutine7 & 0xFFFF
+    436          		if(yn == 0)
+   \                     ??CrossCallReturnLabel_27:
+   \   00002D   7002         JNZ     ??PrintCh8_1
+   \   00002F   E5..         MOV     A,?V0 + 7
+   \                     ??PrintCh8_1:
+   \   000031   7003         JNZ     ??PrintCh8_2
+    437          		{
+    438          			WriteLCD(DATA, ~Font8X8[adder]);
+   \   000033                ; Setup parameters for call to function WriteLCD
+   \   000033   EA           MOV     A,R2
+   \   000034   F4           CPL     A
+   \   000035   FA           MOV     R2,A
+    439          		}
+    440          		else
+    441          		{
+    442          			WriteLCD(DATA, Font8X8[adder]);
+   \                     ??PrintCh8_2:
+   \   000036                ; Setup parameters for call to function WriteLCD
+   \   000036   12....       LCALL   ?Subroutine1 & 0xFFFF
+    443          		}
+    444          		adder += 1;
+    445          		x += 1;
+    446          	}
+   \                     ??CrossCallReturnLabel_13:
+   \   000039   70EF         JNZ     ??PrintCh8_0
+    447          	y += 1;
+   \   00003B   0E           INC     R6
+    448          	x -= 8;
+   \   00003C   E5..         MOV     A,?V0 + 0
+   \   00003E   24F8         ADD     A,#-0x8
+   \   000040   F5..         MOV     ?V0 + 0,A
+    449          	for(wm = 0;wm < 8;wm++)
+   \   000042   75..08       MOV     ?V0 + 4,#0x8
+    450          	{
+    451          		SetRamAddr(y , x);
+   \                     ??PrintCh8_3:
+   \   000045                ; Setup parameters for call to function SetRamAddr
+   \   000045   12....       LCALL   ?Subroutine7 & 0xFFFF
+    452          		if(yn == 0)
+   \                     ??CrossCallReturnLabel_28:
+   \   000048   7002         JNZ     ??PrintCh8_4
+   \   00004A   E5..         MOV     A,?V0 + 7
+   \                     ??PrintCh8_4:
+   \   00004C   7003         JNZ     ??PrintCh8_5
+    453          		{
+    454          				WriteLCD(DATA, ~Font8X8[adder]);
+   \   00004E                ; Setup parameters for call to function WriteLCD
+   \   00004E   EA           MOV     A,R2
+   \   00004F   F4           CPL     A
+   \   000050   FA           MOV     R2,A
+    455          		}
+    456          		else
+    457          		{
+    458          			WriteLCD(DATA, Font8X8[adder]);	
+   \                     ??PrintCh8_5:
+   \   000051                ; Setup parameters for call to function WriteLCD
+   \   000051   12....       LCALL   ?Subroutine1 & 0xFFFF
+    459          		}
+    460          		adder += 1;
+    461          		x += 1;
+    462          	}
+   \                     ??CrossCallReturnLabel_14:
+   \   000054   70EF         JNZ     ??PrintCh8_3
+    463          }
+   \   000056   02....       LJMP    ??Subroutine16_0 & 0xFFFF
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine7:
+   \   000000   12....       LCALL   ?Subroutine11 & 0xFFFF
+   \                     ??CrossCallReturnLabel_33:
+   \   000003   E5..         MOV     A,?V0 + 6
+   \   000005   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine11:
+   \   000000   AA..         MOV     R2,?V0 + 0
+   \   000002   EE           MOV     A,R6
+   \   000003   F9           MOV     R1,A
+   \   000004   12....       LCALL   ??SetRamAddr?relay
+   \   000007   E5..         MOV     A,?V0 + 2
+   \   000009   24..         ADD     A,#(Font8X8 & 0xff)
+   \   00000B   F582         MOV     DPL,A
+   \   00000D   E5..         MOV     A,?V0 + 3
+   \   00000F   34..         ADDC    A,#((Font8X8 >> 8) & 0xff)
+   \   000011   F583         MOV     DPH,A
+   \   000013   E4           CLR     A
+   \   000014   93           MOVC    A,@A+DPTR
+   \   000015   FA           MOV     R2,A
+   \   000016   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine5:
+   \   000000   F5..         MOV     ?V0 + 4,A
+   \   000002   74FF         MOV     A,#-0x1
+   \   000004   3400         ADDC    A,#0x0
+   \   000006   F5..         MOV     ?V0 + 5,A
+   \   000008   7404         MOV     A,#0x4
+   \   00000A   78..         MOV     R0,#?V0 + 4
+   \   00000C   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   7901         MOV     R1,#0x1
+   \   000002   12....       LCALL   ??WriteLCD?relay
+   \   000005   E5..         MOV     A,?V0 + 2
+   \   000007   2401         ADD     A,#0x1
+   \   000009   F5..         MOV     ?V0 + 2,A
+   \   00000B   E5..         MOV     A,?V0 + 3
+   \   00000D   3400         ADDC    A,#0x0
+   \   00000F   F5..         MOV     ?V0 + 3,A
+   \   000011   E5..         MOV     A,?V0 + 0
+   \   000013   04           INC     A
+   \   000014   F5..         MOV     ?V0 + 0,A
+   \   000016   15..         DEC     ?V0 + 4
+   \   000018   E5..         MOV     A,?V0 + 4
+   \   00001A   22           RET
+    464          
+    465          
+    466          /*******************************************************************************
+    467          //º¯ÊýÃû£ºvoid Print8(uint16 y,uint16 x, uint8 ch[],uint16 yn)
+    468          //¹¦ÄÜ£ºÏÔÊ¾8*8×Ö·û´®
+    469          //ÊäÈë£ºxx ,yy ×ø±ê,ch1´ýÏÔÊ¾µÄ×Ö·û´®,ynÊÇ·ñ·´ºÚ
+    470          //Êä³ö£ºÎÞ
+    471          ********************************************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    472          void Print8(uint16 y,uint16 x, uint8 ch[],uint16 yn)
+   \                     Print8:
+    473          {
+   \   000000   74F1         MOV     A,#-0xf
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 15
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV     A,R2
+   \   000006   FE           MOV     R6,A
+   \   000007   8C..         MOV     ?V0 + 0,R4
+    474          	uint8 wm ,ii = 0;
+   \   000009   75..00       MOV     ?V0 + 6,#0x0
+   \   00000C   8008         SJMP    ??Print8_0
+    475          	uint16 adder;
+    476          
+    477          	while(ch[ii] != '\0')
+    478          	{
+    479          		adder = (ch[ii] - 0x20) * 16;
+    480          
+    481          		for(wm = 0;wm < 8;wm++)
+    482          		{
+    483          			SetRamAddr(y , x);
+    484          			if(yn == 0)
+    485          			{
+    486          				WriteLCD(DATA, ~Font8X8[adder]);
+    487          			}
+    488          			else
+    489          			{
+    490          				WriteLCD(DATA, Font8X8[adder]);
+    491          			}
+    492          			adder += 1;
+    493          			x += 1;
+    494          		}
+    495          		y += 1;
+    496          		x -= 8;
+    497          		for(wm = 0;wm < 8;wm++)
+    498          		{
+    499          			SetRamAddr(y , x);
+    500          			if(yn == 0)
+    501          			{
+    502          				WriteLCD(DATA, ~Font8X8[adder]);
+    503          			}
+    504          			else
+    505          			{
+    506          				WriteLCD(DATA, Font8X8[adder]);	
+   \                     ??Print8_1:
+   \   00000E                ; Setup parameters for call to function WriteLCD
+   \   00000E   12....       LCALL   ?Subroutine1 & 0xFFFF
+    507          			}
+   \                     ??CrossCallReturnLabel_15:
+   \   000011   7046         JNZ     ??Print8_2
+    508          			adder += 1;
+    509          			x += 1;
+    510          		}
+    511          		ii += 1;
+   \   000013   05..         INC     ?V0 + 6
+    512          		y -= 1;
+   \   000015   1E           DEC     R6
+   \                     ??Print8_0:
+   \   000016   A8..         MOV     R0,?V0 + 6
+   \   000018   740F         MOV     A,#0xf
+   \   00001A   12....       LCALL   ?XSTACK_DISP0_8
+   \   00001D   E0           MOVX    A,@DPTR
+   \   00001E   28           ADD     A,R0
+   \   00001F   F8           MOV     R0,A
+   \   000020   A3           INC     DPTR
+   \   000021   E0           MOVX    A,@DPTR
+   \   000022   12....       LCALL   ?Subroutine6 & 0xFFFF
+   \                     ??CrossCallReturnLabel_25:
+   \   000025   6044         JZ      ??Print8_3
+   \   000027   F8           MOV     R0,A
+   \   000028   74E0         MOV     A,#-0x20
+   \   00002A   28           ADD     A,R0
+   \   00002B   12....       LCALL   ?Subroutine5 & 0xFFFF
+   \                     ??CrossCallReturnLabel_24:
+   \   00002E   12....       LCALL   ?S_SHL
+   \   000031   85....       MOV     ?V0 + 2,?V0 + 4
+   \   000034   85....       MOV     ?V0 + 3,?V0 + 5
+   \   000037   75..08       MOV     ?V0 + 4,#0x8
+   \                     ??Print8_4:
+   \   00003A                ; Setup parameters for call to function SetRamAddr
+   \   00003A   12....       LCALL   ?Subroutine8 & 0xFFFF
+   \                     ??CrossCallReturnLabel_29:
+   \   00003D   12....       LCALL   ?XSTACK_DISP0_8
+   \   000040   E0           MOVX    A,@DPTR
+   \   000041   7002         JNZ     ??Print8_5
+   \   000043   A3           INC     DPTR
+   \   000044   E0           MOVX    A,@DPTR
+   \                     ??Print8_5:
+   \   000045   7003         JNZ     ??Print8_6
+   \   000047                ; Setup parameters for call to function WriteLCD
+   \   000047   EA           MOV     A,R2
+   \   000048   F4           CPL     A
+   \   000049   FA           MOV     R2,A
+   \                     ??Print8_6:
+   \   00004A                ; Setup parameters for call to function WriteLCD
+   \   00004A   12....       LCALL   ?Subroutine1 & 0xFFFF
+   \                     ??CrossCallReturnLabel_16:
+   \   00004D   70EB         JNZ     ??Print8_4
+   \   00004F   0E           INC     R6
+   \   000050   E5..         MOV     A,?V0 + 0
+   \   000052   24F8         ADD     A,#-0x8
+   \   000054   F5..         MOV     ?V0 + 0,A
+   \   000056   75..08       MOV     ?V0 + 4,#0x8
+   \                     ??Print8_2:
+   \   000059                ; Setup parameters for call to function SetRamAddr
+   \   000059   12....       LCALL   ?Subroutine8 & 0xFFFF
+   \                     ??CrossCallReturnLabel_30:
+   \   00005C   12....       LCALL   ?XSTACK_DISP0_8
+   \   00005F   E0           MOVX    A,@DPTR
+   \   000060   7002         JNZ     ??Print8_7
+   \   000062   A3           INC     DPTR
+   \   000063   E0           MOVX    A,@DPTR
+   \                     ??Print8_7:
+   \   000064   70A8         JNZ     ??Print8_1
+   \   000066                ; Setup parameters for call to function WriteLCD
+   \   000066   EA           MOV     A,R2
+   \   000067   F4           CPL     A
+   \   000068   FA           MOV     R2,A
+   \   000069   80A3         SJMP    ??Print8_1
+    513          	}
+    514          
+    515          }
+   \                     ??Print8_3:
+   \   00006B   7F07         MOV     R7,#0x7
+   \   00006D   02....       LJMP    ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine8:
+   \   000000   12....       LCALL   ?Subroutine11 & 0xFFFF
+   \                     ??CrossCallReturnLabel_34:
+   \   000003   7411         MOV     A,#0x11
+   \   000005   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine6:
+   \   000000   3400         ADDC    A,#0x0
+   \   000002   F9           MOV     R1,A
+   \   000003   8882         MOV     DPL,R0
+   \   000005   8983         MOV     DPH,R1
+   \   000007   E0           MOVX    A,@DPTR
+   \   000008   22           RET
+    516          
+    517          
+    518          /*******************************************************************************
+    519          //º¯ÊýÃû£ºvoid Print16(uint16 y,uint16 x,uint8 ch[],uint16 yn)
+    520          //¹¦ÄÜ£ºÔÚÆÁÄ»ÉÏÏÔÊ¾ºº×Ö
+    521          //ÊäÈë£ºx ,y ×ø±ê,ch[]´ýÏÔÊ¾µÄºº×Ö,ynÊÇ·ñ·´ºÚ
+    522          //Êä³ö£ºÎÞ
+    523          ********************************************************************************
+    524          void Print16(uint16 y,uint16 x,uint8 ch[],uint16 yn)
+    525          {
+    526          	uint8 wm ,ii = 0;
+    527          	uint16 adder;
+    528          
+    529          	wm = 0;
+    530          	adder = 1;
+    531          	while(FontNew8X16_Index[wm] > 128)
+    532          	{
+    533          		if(FontNew8X16_Index[wm] == ch[ii])
+    534          		{
+    535          			if(FontNew8X16_Index[wm + 1] == ch[ii + 1])
+    536          			{
+    537          				adder = wm * 14;
+    538          				break;
+    539          			}
+    540          		}
+    541          		wm += 2;				//ÕÒµ½ºº×ÖÔÚË÷ÒýÖÐµÄÎ»ÖÃ
+    542          	}
+    543          	SetRamAddr(y , x);
+    544          
+    545          	if(adder != 1)					//ÕÒµ½ºº×Ö£¬ÏÔÊ¾³öÀ´	
+    546          	{
+    547          		
+    548          		for(wm = 0;wm < 14;wm++)
+    549          		{
+    550          			SetRamAddr(y , x);
+    551          			if(yn == 0)
+    552          			{
+    553          				WriteLCD(DATA, ~FontNew16X16[adder]);
+    554          			}
+    555          			else
+    556          			{
+    557          				WriteLCD(DATA, FontNew16X16[adder]);
+    558          			}
+    559          			adder += 1;
+    560          			x += 1;
+    561          		}
+    562                          for(wm = 0;wm < 2;wm++)
+    563          		{
+    564          			SetRamAddr(y , x);
+    565          			if(yn == 0)
+    566          			{
+    567          				WriteLCD(DATA, 0xff);
+    568          			}
+    569          			else
+    570          			{
+    571          				WriteLCD(DATA, 0x00);
+    572          			}
+    573          			x += 1;
+    574          		}
+    575          		y += 1;
+    576          		x -=16;
+    577          
+    578          		for(wm = 0;wm < 14;wm++)
+    579          		{
+    580          			SetRamAddr(y , x);
+    581          			if(yn == 0)
+    582          			{
+    583          				WriteLCD(DATA, ~FontNew16X16[adder]);
+    584          			}
+    585          			else
+    586          			{
+    587          				WriteLCD(DATA, FontNew16X16[adder]);
+    588          			}
+    589          			adder += 1;
+    590          			x += 1;
+    591          		}
+    592                          for(wm = 0;wm < 2;wm++)
+    593          		{
+    594          			SetRamAddr(y , x);
+    595          			if(yn == 0)
+    596          			{
+    597          				WriteLCD(DATA, 0xff);
+    598          			}
+    599          			else
+    600          			{
+    601          				WriteLCD(DATA, 0x00);
+    602          			}
+    603          			x += 1;
+    604          		}
+    605          
+    606          
+    607          	}
+    608          	else						//ÕÒ²»µ½×ÖÏÔÊ¾¿Õ¸ñ			
+    609          	{
+    610          		ii += 1;
+    611          
+    612          		for(wm = 0;wm < 16;wm++)
+    613          		{
+    614          			SetRamAddr(y , x);
+    615          			if(yn == 0)
+    616          			{
+    617          				WriteLCD(DATA, 0xff);
+    618          			}
+    619          			else
+    620          			{
+    621          				WriteLCD(DATA, 0x00);
+    622          			}
+    623          			x += 1;
+    624          		}
+    625          		y += 1;
+    626          		x -= 16;
+    627          		for(wm = 0;wm < 16;wm++)
+    628          		{
+    629          			SetRamAddr(y , x);
+    630          			if(yn == 0)
+    631          			{
+    632          				WriteLCD(DATA, 0xff);
+    633          			}
+    634          			else
+    635          			{
+    636          				WriteLCD(DATA, 0x00);
+    637          			}
+    638          			x += 1;
+    639          		}
+    640          	}
+    641          }*/
+    642          
+    643          
+    644          /*******************************************************************************
+    645          //º¯ÊýÃû£ºvoid Print(uint8 y, uint8 x, uint8 ch[], uint16 yn)
+    646          //¹¦ÄÜ£ºÊµÏÖºº×Ö¼°×ÖÄ¸»ìºÏÏÔÊ¾
+    647          //ÊäÈë£ºx ,y ×ø±ê,ch[]´ýÏÔÊ¾µÄºº×Ö»ò×ÖÄ¸,ynÊÇ·ñ·´ºÚ
+    648          //Êä³ö£ºÎÞ
+    649          ********************************************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    650          void Print(uint8 y, uint8 x, uint8 ch[], uint16 yn)
+   \                     Print:
+    651          {
+   \   000000   74F0         MOV     A,#-0x10
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 16
+   \   000005                ; Auto size: 3
+   \   000005   74FD         MOV     A,#-0x3
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+   \   00000A   89..         MOV     ?V0 + 4,R1
+   \   00000C   8A..         MOV     ?V0 + 0,R2
+   \   00000E   8C..         MOV     ?V0 + 6,R4
+   \   000010   8D..         MOV     ?V0 + 7,R5
+   \   000012   7413         MOV     A,#0x13
+   \   000014   12....       LCALL   ?XSTACK_DISP0_8
+   \   000017   E0           MOVX    A,@DPTR
+   \   000018   FE           MOV     R6,A
+   \   000019   A3           INC     DPTR
+   \   00001A   E0           MOVX    A,@DPTR
+   \   00001B   FF           MOV     R7,A
+    652          	uint8 ch2[3];
+    653          	uint8 ii;
+    654                  ii = 0;
+   \   00001C   75..00       MOV     ?V0 + 1,#0x0
+   \   00001F   8021         SJMP    ??Print_0
+    655          	while(ch[ii] != '\0')
+    656          	{
+    657          		if(ch[ii] > 128)
+    658          		{
+    659          			ch2[0] = ch[ii];
+    660          	 		ch2[1] = ch[ii + 1];
+   \                     ??Print_1:
+   \   000021   8882         MOV     DPL,R0
+   \   000023   8983         MOV     DPH,R1
+   \   000025   A3           INC     DPTR
+   \   000026   E0           MOVX    A,@DPTR
+   \   000027   C0E0         PUSH    A
+   \   000029   7401         MOV     A,#0x1
+   \   00002B   12....       LCALL   ?XSTACK_DISP0_8
+   \   00002E   D0E0         POP     A
+   \   000030   F0           MOVX    @DPTR,A
+    661          			ch2[2] = '\0';			//ºº×ÖÎªÁ½¸ö×Ö½Ú
+   \   000031   7402         MOV     A,#0x2
+   \   000033   12....       LCALL   ?XSTACK_DISP0_8
+   \   000036   E4           CLR     A
+   \   000037   F0           MOVX    @DPTR,A
+    662          			//Print16(y , x , ch2 , yn);	//ÏÔÊ¾ºº×Ö
+    663          			x += 16;
+   \   000038   7410         MOV     A,#0x10
+   \   00003A   25..         ADD     A,?V0 + 0
+   \   00003C   F5..         MOV     ?V0 + 0,A
+    664          			ii += 2;
+   \   00003E   05..         INC     ?V0 + 1
+   \                     ??Print_2:
+   \   000040   05..         INC     ?V0 + 1
+    665          		}
+   \                     ??Print_0:
+   \   000042   85....       MOV     ?V0 + 2,?V0 + 1
+   \   000045   E5..         MOV     A,?V0 + 6
+   \   000047   25..         ADD     A,?V0 + 2
+   \   000049   F8           MOV     R0,A
+   \   00004A   E5..         MOV     A,?V0 + 7
+   \   00004C   12....       LCALL   ?Subroutine6 & 0xFFFF
+   \                     ??CrossCallReturnLabel_26:
+   \   00004F   6041         JZ      ??Print_3
+   \   000051   C3           CLR     C
+   \   000052   9481         SUBB    A,#-0x7f
+   \   000054   E0           MOVX    A,@DPTR
+   \   000055   85..82       MOV     DPL,?XSP + 0
+   \   000058   85..83       MOV     DPH,?XSP + 1
+   \   00005B   F0           MOVX    @DPTR,A
+   \   00005C   50C3         JNC     ??Print_1
+    666          		else
+    667          		{
+    668          			ch2[0] = ch[ii];	
+    669          			ch2[1] = '\0';			//×ÖÄ¸Õ¼Ò»¸ö×Ö½Ú
+   \   00005E   7401         MOV     A,#0x1
+   \   000060   12....       LCALL   ?XSTACK_DISP0_8
+   \   000063   E4           CLR     A
+   \   000064   F0           MOVX    @DPTR,A
+    670          			Print8(y , x , ch2 , yn);	//ÏÔÊ¾×ÖÄ¸
+   \   000065                ; Setup parameters for call to function Print8
+   \   000065   8E..         MOV     ?V0 + 2,R6
+   \   000067   8F..         MOV     ?V0 + 3,R7
+   \   000069   78..         MOV     R0,#?V0 + 2
+   \   00006B   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   00006E   7402         MOV     A,#0x2
+   \   000070   12....       LCALL   ?XSTACK_DISP0_8
+   \   000073   8582..       MOV     ?V0 + 2,DPL
+   \   000076   8583..       MOV     ?V0 + 3,DPH
+   \   000079   78..         MOV     R0,#?V0 + 2
+   \   00007B   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   00007E   AC..         MOV     R4,?V0 + 0
+   \   000080   7D00         MOV     R5,#0x0
+   \   000082   AA..         MOV     R2,?V0 + 4
+   \   000084   12....       LCALL   ??Subroutine17_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_39:
+   \   000087   12....       LCALL   ?DEALLOC_XSTACK8
+    671          			x += 8;
+   \   00008A   7408         MOV     A,#0x8
+   \   00008C   25..         ADD     A,?V0 + 0
+   \   00008E   F5..         MOV     ?V0 + 0,A
+    672          			ii += 1;
+   \   000090   80AE         SJMP    ??Print_2
+    673          		}
+    674          	}
+    675          }
+   \                     ??Print_3:
+   \   000092   7403         MOV     A,#0x3
+   \   000094   02....       LJMP    ?Subroutine15 & 0xFFFF
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    676          void HalLcdClearLine( uint8 line )
+   \                     HalLcdClearLine:
+    677          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+    678            Print8(line,0,"                ",1);
+   \   000005                ; Setup parameters for call to function Print8
+   \   000005   75..01       MOV     ?V0 + 0,#0x1
+   \   000008   75..00       MOV     ?V0 + 1,#0x0
+   \   00000B   78..         MOV     R0,#?V0 + 0
+   \   00000D   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000010   75....       MOV     ?V0 + 0,#(`?<Constant "                ">` & 0xff)
+   \   000013   75....       MOV     ?V0 + 1,#((`?<Constant "                ">` >> 8) & 0xff)
+   \   000016   78..         MOV     R0,#?V0 + 0
+   \   000018   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   00001B   7C00         MOV     R4,#0x0
+   \   00001D   7D00         MOV     R5,#0x0
+   \   00001F   E9           MOV     A,R1
+   \   000020   12....       LCALL   ?Subroutine10 & 0xFFFF
+   \                     ??CrossCallReturnLabel_37:
+   \   000023   12....       LCALL   ?DEALLOC_XSTACK8
+    679          }
+   \   000026   7F02         MOV     R7,#0x2
+   \   000028   02....       LJMP    ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    680          void HalLcdWriteString ( char *str, uint8 option)
+   \                     HalLcdWriteString:
+    681          {
+   \   000000   74F4         MOV     A,#-0xc
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 20
+   \   000005   74EC         MOV     A,#-0x14
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+   \   00000A   EA           MOV     A,R2
+   \   00000B   FE           MOV     R6,A
+   \   00000C   EB           MOV     A,R3
+   \   00000D   FF           MOV     R7,A
+   \   00000E   89..         MOV     ?V0 + 3,R1
+    682            unsigned char i; 
+    683            uint8 LcdBuf[20];
+    684            osal_memcpy(LcdBuf,str,20);
+   \   000010                ; Setup parameters for call to function osal_memcpy
+   \   000010   8E..         MOV     ?V0 + 0,R6
+   \   000012   8F..         MOV     ?V0 + 1,R7
+   \   000014   75..00       MOV     ?V0 + 2,#0x0
+   \   000017   78..         MOV     R0,#?V0 + 0
+   \   000019   12....       LCALL   ?PUSH_XSTACK_I_THREE
+   \   00001C   7C14         MOV     R4,#0x14
+   \   00001E   7D00         MOV     R5,#0x0
+   \   000020   7403         MOV     A,#0x3
+   \   000022   12....       LCALL   ?XSTACK_DISP0_8
+   \   000025   AA82         MOV     R2,DPL
+   \   000027   AB83         MOV     R3,DPH
+   \   000029   12....       LCALL   ??osal_memcpy?relay
+   \   00002C   7403         MOV     A,#0x3
+   \   00002E   12....       LCALL   ?DEALLOC_XSTACK8
+    685            i = strlen(str);
+   \   000031                ; Setup parameters for call to function strlen
+   \   000031   EE           MOV     A,R6
+   \   000032   FA           MOV     R2,A
+   \   000033   EF           MOV     A,R7
+   \   000034   FB           MOV     R3,A
+   \   000035   12....       LCALL   ??strlen?relay
+   \   000038   EA           MOV     A,R2
+   \   000039   F5..         MOV     ?V0 + 0,A
+    686            LcdBuf[i] = '\0';  
+   \   00003B   85..82       MOV     DPL,?XSP + 0
+   \   00003E   85..83       MOV     DPH,?XSP + 1
+   \   000041   12....       LCALL   ?Subroutine9 & 0xFFFF
+    687            switch (option)
+   \                     ??CrossCallReturnLabel_32:
+   \   000044   E5..         MOV     A,?V0 + 3
+   \   000046   12....       LCALL   ?UC_SWITCH_SPARSE
+   \                     `?<Jumptable for HalLcdWriteString>_0`:
+   \   000049   01           DB        1
+   \   00004A   01           DB        1
+   \   00004B   06           DB        6
+   \   00004C   ....         DW        ??HalLcdWriteString_0
+   \   00004E   00           DB        0
+   \   00004F   ....         DW        ??HalLcdWriteString_1
+    688            {
+    689              case 1:
+    690              case 2:
+    691              case 3:      
+    692              case 4:     
+    693              case 5:    
+    694              case 6:
+    695                 HalLcdClearLine( option%7 );
+   \                     ??HalLcdWriteString_0:
+   \   000051   E5..         MOV     A,?V0 + 3
+   \   000053   75F007       MOV     B,#0x7
+   \   000056   84           DIV     AB
+   \   000057   AEF0         MOV     R6,B
+   \   000059                ; Setup parameters for call to function HalLcdClearLine
+   \   000059   EE           MOV     A,R6
+   \   00005A   F9           MOV     R1,A
+   \   00005B   12....       LCALL   ??HalLcdClearLine?relay
+    696                 Print8(option%7,0,(unsigned char *)LcdBuf,1);
+   \   00005E                ; Setup parameters for call to function Print8
+   \   00005E   75..01       MOV     ?V0 + 0,#0x1
+   \   000061   75..00       MOV     ?V0 + 1,#0x0
+   \   000064   78..         MOV     R0,#?V0 + 0
+   \   000066   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000069   7402         MOV     A,#0x2
+   \   00006B   12....       LCALL   ?XSTACK_DISP0_8
+   \   00006E   8582..       MOV     ?V0 + 0,DPL
+   \   000071   8583..       MOV     ?V0 + 1,DPH
+   \   000074   78..         MOV     R0,#?V0 + 0
+   \   000076   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000079   7C00         MOV     R4,#0x0
+   \   00007B   7D00         MOV     R5,#0x0
+   \   00007D   EE           MOV     A,R6
+   \   00007E   12....       LCALL   ?Subroutine10 & 0xFFFF
+    697               /*  y = option%7;
+    698                 x = 0;
+    699          	while(LcdBuf[ii] != '\0')
+    700          	{
+    701          		adder = (LcdBuf[ii] - 0x20) * 16;
+    702          
+    703          		for(wm = 0;wm < 8;wm++)
+    704          		{
+    705          			SetRamAddr(y , x);
+    706          			if(yn == 0)
+    707          			{
+    708          				WriteLCD(DATA, ~Font8X8[adder]);
+    709          			}
+    710          			else
+    711          			{
+    712          				WriteLCD(DATA, Font8X8[adder]);
+    713          			}
+    714          			adder += 1;
+    715          			x += 1;
+    716          		}
+    717          		y += 1;
+    718          		x -= 8;
+    719          		for(wm = 0;wm < 8;wm++)
+    720          		{
+    721          			SetRamAddr(y , x);
+    722          			if(yn == 0)
+    723          			{
+    724          				WriteLCD(DATA, ~Font8X8[adder]);
+    725          			}
+    726          			else
+    727          			{
+    728          				WriteLCD(DATA, Font8X8[adder]);	
+    729          			}
+    730          			adder += 1;
+    731          			x += 1;
+    732          		}
+    733          		ii += 1;
+    734          		y -= 1;
+    735          	}*/
+    736                //Print8(option%7,0,(unsigned char *)LcdBuf,1);
+    737                break;
+    738              default :
+    739                break;
+    740            }
+   \                     ??CrossCallReturnLabel_38:
+   \   000081   12....       LCALL   ?DEALLOC_XSTACK8
+    741          }
+   \                     ??HalLcdWriteString_1:
+   \   000084   7414         MOV     A,#0x14
+   \   000086   12....       LCALL   ?DEALLOC_XSTACK8
+   \   000089   7F04         MOV     R7,#0x4
+   \   00008B   02....       LJMP    ?BANKED_LEAVE_XDATA
+    742          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    743          void HalLcdWriteValue ( uint32 value, const uint8 radix, uint8 option)
+   \                     HalLcdWriteValue:
+    744          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    745          ;
+    746          }
+   \   000000   02....       LJMP    ?BRET
+    747          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    748          void HalLcdWriteScreen( char *line1, char *line2 )
+   \                     HalLcdWriteScreen:
+    749          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   EC           MOV     A,R4
+   \   000006   FE           MOV     R6,A
+   \   000007   ED           MOV     A,R5
+   \   000008   FF           MOV     R7,A
+    750          #if (HAL_LCD == TRUE)
+    751            HalLcdWriteString( line1, 3 );
+   \   000009                ; Setup parameters for call to function HalLcdWriteString
+   \   000009   7903         MOV     R1,#0x3
+   \   00000B   12....       LCALL   ??HalLcdWriteString?relay
+    752            HalLcdWriteString( line2, 5 );
+   \   00000E                ; Setup parameters for call to function HalLcdWriteString
+   \   00000E   7905         MOV     R1,#0x5
+   \   000010   EE           MOV     A,R6
+   \   000011   FA           MOV     R2,A
+   \   000012   EF           MOV     A,R7
+   \   000013   FB           MOV     R3,A
+   \   000014   12....       LCALL   ??HalLcdWriteString?relay
+    753          #endif
+    754          
+    755          }
+   \   000017   02....       LJMP    ?Subroutine14 & 0xFFFF
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    756          void HalLcdWriteStringValue( char *title, uint16 value, uint8 format, uint8 line )
+   \                     HalLcdWriteStringValue:
+    757          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    758          ;
+    759          }
+   \   000000   02....       LJMP    ?BRET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    760          void HalLcdWriteStringValueValue( char *title, uint16 value1, uint8 format1,
+   \                     HalLcdWriteStringValueValue:
+    761                                            uint16 value2, uint8 format2, uint8 line )
+    762          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    763          ;
+    764          }
+   \   000000   02....       LJMP    ?BRET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    765          void upLcd( char *ptr,uint8 op )
+   \                     upLcd:
+    766          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    767            HalLcdWriteString(ptr,op);
+   \   000004                ; Setup parameters for call to function HalLcdWriteString
+   \   000004   12....       LCALL   ??HalLcdWriteString?relay
+    768          }
+   \   000007   02....       LJMP    ?Subroutine12 & 0xFFFF
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for ContrastValue>`:
+   \   000000   5A           DB 90
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??delay1?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    delay1
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??delay_us?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    delay_us
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??Write595?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    Write595
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??WriteLCD?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    WriteLCD
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SetRamAddr?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SetRamAddr
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SetContrast?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SetContrast
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??InitDisplay?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    InitDisplay
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??contrastctrl?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    contrastctrl
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??ClearScreen?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    ClearScreen
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??HalLcdInit?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    HalLcdInit
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??Print6?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    Print6
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??Printn8?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    Printn8
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??PrintCh8?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    PrintCh8
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??Print8?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    Print8
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??Print?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    Print
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??HalLcdClearLine?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    HalLcdClearLine
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??HalLcdWriteString?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    HalLcdWriteString
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??HalLcdWriteValue?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    HalLcdWriteValue
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??HalLcdWriteScreen?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    HalLcdWriteScreen
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??HalLcdWriteStringValue?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    HalLcdWriteStringValue
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??HalLcdWriteStringValueValue?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    HalLcdWriteStringValueValue
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??upLcd?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    upLcd
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "                ">`:
+   \   000000   20202020     DB "                "
+   \            20202020
+   \            20202020
+   \            20202020
+   \            00      
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_a:
+   \   000000   0A000000     DD 10
+
+   Maximum stack usage in bytes:
+
+     Function                    ISTACK PSTACK XSTACK
+     --------                    ------ ------ ------
+     ClearScreen                     0      0      9
+       -> SetRamAddr                 0      0     18
+       -> WriteLCD                   0      0     18
+     HalLcdClearLine                 0      0     46
+       -> Print8                     0      0     28
+     HalLcdInit                      2      0      0
+       -> delay_us                   4      0      0
+       -> delay_us                   4      0      0
+       -> WriteLCD                   4      0      0
+       -> delay_us                   4      0      0
+       -> WriteLCD                   4      0      0
+       -> delay_us                   4      0      0
+       -> WriteLCD                   4      0      0
+       -> delay_us                   4      0      0
+       -> WriteLCD                   4      0      0
+       -> delay_us                   4      0      0
+       -> WriteLCD                   4      0      0
+       -> delay_us                   4      0      0
+       -> WriteLCD                   4      0      0
+       -> delay_us                   4      0      0
+       -> WriteLCD                   4      0      0
+       -> delay_us                   4      0      0
+       -> WriteLCD                   4      0      0
+       -> delay_us                   4      0      0
+       -> WriteLCD                   4      0      0
+       -> delay_us                   4      0      0
+       -> WriteLCD                   4      0      0
+       -> delay_us                   4      0      0
+       -> WriteLCD                   4      0      0
+       -> delay_us                   4      0      0
+       -> WriteLCD                   4      0      0
+       -> delay_us                   4      0      0
+       -> WriteLCD                   4      0      0
+       -> WriteLCD                   4      0      0
+       -> WriteLCD                   4      0      0
+       -> delay_us                   4      0      0
+       -> SetContrast                4      0      0
+       -> ClearScreen                4      0      0
+     HalLcdWriteScreen               0      0      9
+       -> HalLcdWriteString          0      0     18
+       -> HalLcdWriteString          0      0     18
+     HalLcdWriteString               1      0     45
+       -> osal_memcpy                0      0     70
+       -> strlen                     0      0     64
+       -> HalLcdClearLine            0      0     64
+       -> Print8                     0      0     72
+     HalLcdWriteStringValue          0      0      1
+     HalLcdWriteStringValueValue     0      0      4
+     HalLcdWriteValue                0      0      1
+     InitDisplay                     2      0      0
+       -> WriteLCD                   4      0      0
+       -> WriteLCD                   4      0      0
+       -> WriteLCD                   4      0      0
+       -> SetContrast                4      0      0
+       -> WriteLCD                   4      0      0
+       -> WriteLCD                   4      0      0
+     Print                           1      0     25
+       -> Print8                     0      0     46
+     Print6                          0      0     16
+       -> WriteLCD                   0      0     32
+       -> SetRamAddr                 0      0     32
+       -> WriteLCD                   0      0     32
+     Print8                          0      0     51
+       -> WriteLCD                   0      0     30
+       -> SetRamAddr                 0      0     30
+       -> WriteLCD                   0      0     30
+       -> WriteLCD                   0      0     30
+       -> SetRamAddr                 0      0     30
+       -> WriteLCD                   0      0     30
+     PrintCh8                        0      0     18
+       -> SetRamAddr                 0      0     32
+       -> WriteLCD                   0      0     32
+       -> WriteLCD                   0      0     32
+       -> SetRamAddr                 0      0     32
+       -> WriteLCD                   0      0     32
+       -> WriteLCD                   0      0     32
+     Printn8                         1      0     33
+       -> Print8                     0      0     58
+     SetContrast                     0      0     18
+       -> WriteLCD                   0      0     18
+       -> WriteLCD                   0      0     18
+       -> WriteLCD                   0      0     18
+     SetRamAddr                      0      0     25
+       -> WriteLCD                   0      0     18
+       -> WriteLCD                   0      0     18
+       -> WriteLCD                   0      0     18
+     Write595                        0      0      9
+     WriteLCD                        0      0     25
+       -> delay1                     0      0     18
+       -> Write595                   0      0     18
+       -> delay1                     0      0     18
+     contrastctrl                    0      0      9
+       -> SetContrast                0      0     18
+       -> delay_us                   0      0     18
+       -> SetContrast                0      0     18
+       -> delay_us                   0      0     18
+     delay1                          0      0      9
+     delay_us                        0      0      9
+     upLcd                           2      0      0
+       -> HalLcdWriteString          4      0      0
+
+
+   Segment part sizes:
+
+     Function/Label                      Bytes
+     --------------                      -----
+     _A_P0                                  1
+     _A_P1                                  1
+     _A_P2                                  1
+     P0DIR                                  1
+     P1DIR                                  1
+     P2DIR                                  1
+     ContrastValue                          1
+     delay1                                13
+     delay_us                              67
+     ?Subroutine2                           9
+     Write595                              31
+     WriteLCD                              46
+     ?Subroutine14                          5
+     SetRamAddr                            32
+     ?Subroutine13                          6
+     ?Subroutine4                          10
+     SetContrast                           20
+     ?Subroutine3                          13
+     InitDisplay                           46
+     ?Subroutine12                          7
+     contrastctrl                          58
+     ClearScreen                           34
+     HalLcdInit                           117
+     ?Subroutine0                          13
+     Print6                               120
+     ??Subroutine16_0                       5
+     ?Subroutine15                          3
+     Printn8                              218
+     ?Subroutine10                          1
+     ??Subroutine17_0                       8
+     ?Subroutine9                          15
+     PrintCh8                              89
+     ?Subroutine7                           6
+     ?Subroutine11                         23
+     ?Subroutine5                          13
+     ?Subroutine1                          27
+     Print8                               112
+     ?Subroutine8                           6
+     ?Subroutine6                           9
+     Print                                151
+     HalLcdClearLine                       43
+     HalLcdWriteString                    142
+     HalLcdWriteValue                       3
+     HalLcdWriteScreen                     26
+     HalLcdWriteStringValue                 3
+     HalLcdWriteStringValueValue            3
+     upLcd                                 10
+     ?<Initializer for ContrastValue>       1
+     ??delay1?relay                         6
+     ??delay_us?relay                       6
+     ??Write595?relay                       6
+     ??WriteLCD?relay                       6
+     ??SetRamAddr?relay                     6
+     ??SetContrast?relay                    6
+     ??InitDisplay?relay                    6
+     ??contrastctrl?relay                   6
+     ??ClearScreen?relay                    6
+     ??HalLcdInit?relay                     6
+     ??Print6?relay                         6
+     ??Printn8?relay                        6
+     ??PrintCh8?relay                       6
+     ??Print8?relay                         6
+     ??Print?relay                          6
+     ??HalLcdClearLine?relay                6
+     ??HalLcdWriteString?relay              6
+     ??HalLcdWriteValue?relay               6
+     ??HalLcdWriteScreen?relay              6
+     ??HalLcdWriteStringValue?relay         6
+     ??HalLcdWriteStringValueValue?relay    6
+     ??upLcd?relay                          6
+     ?<Constant "                ">        17
+     __Constant_a                           4
+
+ 
+ 1 563 bytes in segment BANKED_CODE
+   132 bytes in segment BANK_RELAYS
+     6 bytes in segment SFR_AN
+     1 byte  in segment XDATA_I
+     1 byte  in segment XDATA_ID
+    21 bytes in segment XDATA_ROM_C
+ 
+ 1 696 bytes of CODE  memory
+    17 bytes of CONST memory (+ 4 bytes shared)
+     0 bytes of DATA  memory (+ 6 bytes shared)
+     1 byte  of XDATA memory
+
+Errors: none
+Warnings: none
